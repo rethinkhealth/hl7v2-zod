@@ -4,10 +4,10 @@ import * as fields from '../fields/cm2';
 
 /**
  * HL7 v2.6 CM2 Segment
- * 
+ *
  * HL7 v2.6 CM2 segment definition
  * Contains field definitions and constraints for the CM2 segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,17 +17,19 @@ import * as fields from '../fields/cm2';
  * CM2 segment schema
  * Defines the structure and validation rules for the CM2 segment
  */
-export const cm2Schema = z.object({
-  "1": fields.CM2_1.optional(),
-  "2": fields.CM2_2,
-  "3": fields.CM2_3.optional(),
-  "4": z.array(fields.CM2_4)
-}).register(hl7v2Metadata, {
-  title: "CM2",
-  version: "2.6",
-  description: "HL7 v2.6 CM2 segment",
-  type: "Segment"
-});
+export const cm2Schema = z
+  .object({
+    '1': fields.CM2_1.optional(),
+    '2': fields.CM2_2,
+    '3': fields.CM2_3.optional(),
+    '4': z.array(fields.CM2_4),
+  })
+  .register(hl7v2Metadata, {
+    title: 'CM2',
+    version: '2.6',
+    description: 'HL7 v2.6 CM2 segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the CM2 schema

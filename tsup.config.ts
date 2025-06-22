@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup'
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entry: ['src/index.ts'],
@@ -11,4 +11,4 @@ export default defineConfig({
   minify: false,
   external: ['zod', 'zod/v4'],
   onSuccess: 'tsc --noEmit',
-}) 
+});

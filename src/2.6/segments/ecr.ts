@@ -4,10 +4,10 @@ import * as fields from '../fields/ecr';
 
 /**
  * HL7 v2.6 ECR Segment
- * 
+ *
  * HL7 v2.6 ECR segment definition
  * Contains field definitions and constraints for the ECR segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,16 +17,18 @@ import * as fields from '../fields/ecr';
  * ECR segment schema
  * Defines the structure and validation rules for the ECR segment
  */
-export const ecrSchema = z.object({
-  "1": fields.ECR_1,
-  "2": fields.ECR_2,
-  "3": z.array(fields.ECR_3).optional()
-}).register(hl7v2Metadata, {
-  title: "ECR",
-  version: "2.6",
-  description: "HL7 v2.6 ECR segment",
-  type: "Segment"
-});
+export const ecrSchema = z
+  .object({
+    '1': fields.ECR_1,
+    '2': fields.ECR_2,
+    '3': z.array(fields.ECR_3).optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'ECR',
+    version: '2.6',
+    description: 'HL7 v2.6 ECR segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the ECR schema

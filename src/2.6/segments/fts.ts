@@ -4,10 +4,10 @@ import * as fields from '../fields/fts';
 
 /**
  * HL7 v2.6 FTS Segment
- * 
+ *
  * HL7 v2.6 FTS segment definition
  * Contains field definitions and constraints for the FTS segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,15 +17,17 @@ import * as fields from '../fields/fts';
  * FTS segment schema
  * Defines the structure and validation rules for the FTS segment
  */
-export const ftsSchema = z.object({
-  "1": fields.FTS_1.optional(),
-  "2": fields.FTS_2.optional()
-}).register(hl7v2Metadata, {
-  title: "FTS",
-  version: "2.6",
-  description: "HL7 v2.6 FTS segment",
-  type: "Segment"
-});
+export const ftsSchema = z
+  .object({
+    '1': fields.FTS_1.optional(),
+    '2': fields.FTS_2.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'FTS',
+    version: '2.6',
+    description: 'HL7 v2.6 FTS segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the FTS schema

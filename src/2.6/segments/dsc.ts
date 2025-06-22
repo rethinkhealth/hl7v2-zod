@@ -4,10 +4,10 @@ import * as fields from '../fields/dsc';
 
 /**
  * HL7 v2.6 DSC Segment
- * 
+ *
  * HL7 v2.6 DSC segment definition
  * Contains field definitions and constraints for the DSC segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,15 +17,17 @@ import * as fields from '../fields/dsc';
  * DSC segment schema
  * Defines the structure and validation rules for the DSC segment
  */
-export const dscSchema = z.object({
-  "1": fields.DSC_1.optional(),
-  "2": fields.DSC_2.optional()
-}).register(hl7v2Metadata, {
-  title: "DSC",
-  version: "2.6",
-  description: "HL7 v2.6 DSC segment",
-  type: "Segment"
-});
+export const dscSchema = z
+  .object({
+    '1': fields.DSC_1.optional(),
+    '2': fields.DSC_2.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'DSC',
+    version: '2.6',
+    description: 'HL7 v2.6 DSC segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the DSC schema

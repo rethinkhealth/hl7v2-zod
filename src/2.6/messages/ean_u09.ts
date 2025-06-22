@@ -4,10 +4,10 @@ import * as segments from '../segments';
 
 /**
  * HL7 v2.6 EAN_U09 Message
- * 
+ *
  * HL7 v2.6 EAN_U09 message definition
  * Contains segment definitions and constraints for the EAN_U09 message.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,15 +17,17 @@ import * as segments from '../segments';
  * EAN_U09.NOTIFICATION group schema
  * Defines the structure and validation rules for the EAN_U09.NOTIFICATION group
  */
-export const eanU09NotificationSchema = z.object({
-  "NDS": segments.ndsSchema,
-  "NTE": segments.nteSchema.optional()
-}).register(hl7v2Metadata, {
-  title: "EAN_U09.NOTIFICATION",
-  version: "2.6",
-  description: "HL7 v2.6 EAN_U09.NOTIFICATION group",
-  type: "Group"
-});
+export const eanU09NotificationSchema = z
+  .object({
+    NDS: segments.ndsSchema,
+    NTE: segments.nteSchema.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'EAN_U09.NOTIFICATION',
+    version: '2.6',
+    description: 'HL7 v2.6 EAN_U09.NOTIFICATION group',
+    type: 'Group',
+  });
 
 /**
  * TypeScript type inferred from the EAN_U09.NOTIFICATION schema
@@ -36,19 +38,21 @@ export type EAN_U09_NOTIFICATION = z.infer<typeof eanU09NotificationSchema>;
  * EAN_U09 message schema
  * Defines the structure and validation rules for the EAN_U09 message
  */
-export const ean_u09Schema = z.object({
-  "MSH": segments.mshSchema,
-  "SFT": z.array(segments.sftSchema).optional(),
-  "UAC": segments.uacSchema.optional(),
-  "EQU": segments.equSchema,
-  "NOTIFICATION": z.array(eanU09NotificationSchema),
-  "ROL": segments.rolSchema.optional()
-}).register(hl7v2Metadata, {
-  title: "EAN_U09",
-  version: "2.6",
-  description: "HL7 v2.6 EAN_U09 message",
-  type: "Message"
-});
+export const ean_u09Schema = z
+  .object({
+    MSH: segments.mshSchema,
+    SFT: z.array(segments.sftSchema).optional(),
+    UAC: segments.uacSchema.optional(),
+    EQU: segments.equSchema,
+    NOTIFICATION: z.array(eanU09NotificationSchema),
+    ROL: segments.rolSchema.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'EAN_U09',
+    version: '2.6',
+    description: 'HL7 v2.6 EAN_U09 message',
+    type: 'Message',
+  });
 
 /**
  * TypeScript type inferred from the EAN_U09 schema

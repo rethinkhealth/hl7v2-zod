@@ -4,10 +4,10 @@ import * as fields from '../fields/mfi';
 
 /**
  * HL7 v2.6 MFI Segment
- * 
+ *
  * HL7 v2.6 MFI segment definition
  * Contains field definitions and constraints for the MFI segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,19 +17,21 @@ import * as fields from '../fields/mfi';
  * MFI segment schema
  * Defines the structure and validation rules for the MFI segment
  */
-export const mfiSchema = z.object({
-  "1": fields.MFI_1,
-  "2": z.array(fields.MFI_2).optional(),
-  "3": fields.MFI_3,
-  "4": fields.MFI_4.optional(),
-  "5": fields.MFI_5.optional(),
-  "6": fields.MFI_6
-}).register(hl7v2Metadata, {
-  title: "MFI",
-  version: "2.6",
-  description: "HL7 v2.6 MFI segment",
-  type: "Segment"
-});
+export const mfiSchema = z
+  .object({
+    '1': fields.MFI_1,
+    '2': z.array(fields.MFI_2).optional(),
+    '3': fields.MFI_3,
+    '4': fields.MFI_4.optional(),
+    '5': fields.MFI_5.optional(),
+    '6': fields.MFI_6,
+  })
+  .register(hl7v2Metadata, {
+    title: 'MFI',
+    version: '2.6',
+    description: 'HL7 v2.6 MFI segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the MFI schema

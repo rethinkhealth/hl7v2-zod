@@ -4,10 +4,10 @@ import * as segments from '../segments';
 
 /**
  * HL7 v2.6 ADT_A60 Message
- * 
+ *
  * HL7 v2.6 ADT_A60 message definition
  * Contains segment definitions and constraints for the ADT_A60 message.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,16 +17,18 @@ import * as segments from '../segments';
  * ADT_A60.VISIT group schema
  * Defines the structure and validation rules for the ADT_A60.VISIT group
  */
-export const adtA60VisitSchema = z.object({
-  "PV1": segments.pv1Schema,
-  "PV2": segments.pv2Schema.optional(),
-  "ARV": z.array(segments.arvSchema).optional()
-}).register(hl7v2Metadata, {
-  title: "ADT_A60.VISIT",
-  version: "2.6",
-  description: "HL7 v2.6 ADT_A60.VISIT group",
-  type: "Group"
-});
+export const adtA60VisitSchema = z
+  .object({
+    PV1: segments.pv1Schema,
+    PV2: segments.pv2Schema.optional(),
+    ARV: z.array(segments.arvSchema).optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'ADT_A60.VISIT',
+    version: '2.6',
+    description: 'HL7 v2.6 ADT_A60.VISIT group',
+    type: 'Group',
+  });
 
 /**
  * TypeScript type inferred from the ADT_A60.VISIT schema
@@ -37,21 +39,23 @@ export type ADT_A60_VISIT = z.infer<typeof adtA60VisitSchema>;
  * ADT_A60 message schema
  * Defines the structure and validation rules for the ADT_A60 message
  */
-export const adt_a60Schema = z.object({
-  "MSH": segments.mshSchema,
-  "SFT": z.array(segments.sftSchema).optional(),
-  "UAC": segments.uacSchema.optional(),
-  "EVN": segments.evnSchema,
-  "PID": segments.pidSchema,
-  "ARV": z.array(segments.arvSchema).optional(),
-  "VISIT": adtA60VisitSchema.optional(),
-  "IAM": z.array(segments.iamSchema).optional()
-}).register(hl7v2Metadata, {
-  title: "ADT_A60",
-  version: "2.6",
-  description: "HL7 v2.6 ADT_A60 message",
-  type: "Message"
-});
+export const adt_a60Schema = z
+  .object({
+    MSH: segments.mshSchema,
+    SFT: z.array(segments.sftSchema).optional(),
+    UAC: segments.uacSchema.optional(),
+    EVN: segments.evnSchema,
+    PID: segments.pidSchema,
+    ARV: z.array(segments.arvSchema).optional(),
+    VISIT: adtA60VisitSchema.optional(),
+    IAM: z.array(segments.iamSchema).optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'ADT_A60',
+    version: '2.6',
+    description: 'HL7 v2.6 ADT_A60 message',
+    type: 'Message',
+  });
 
 /**
  * TypeScript type inferred from the ADT_A60 schema

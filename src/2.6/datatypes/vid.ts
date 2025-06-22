@@ -6,10 +6,10 @@ import { CWE } from './cwe';
 
 /**
  * HL7 v2.6 VID Composite Data Type
- * 
+ *
  * HL7 v2.6 VID composite data type
  * Each composite type consists of multiple components with specific types and constraints.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -19,55 +19,57 @@ import { CWE } from './cwe';
  * VID.1 - Version ID
  */
 export const VID_1 = SimpleTypes.ID.max(5).optional().register(hl7v2Metadata, {
-  "title": "VID.1",
-  "version": "2.6",
-  "description": "Version ID",
-  "type": "DataType",
-  "length": 5,
-  "optionality": "O"
+  title: 'VID.1',
+  version: '2.6',
+  description: 'Version ID',
+  type: 'DataType',
+  length: 5,
+  optionality: 'O',
 });
 
 /**
  * VID.2 - Internationalization Code
  */
 export const VID_2 = CWE.optional().register(hl7v2Metadata, {
-  "title": "VID.2",
-  "version": "2.6",
-  "description": "Internationalization Code",
-  "type": "DataType",
-  "length": 483,
-  "optionality": "O"
+  title: 'VID.2',
+  version: '2.6',
+  description: 'Internationalization Code',
+  type: 'DataType',
+  length: 483,
+  optionality: 'O',
 });
 
 /**
  * VID.3 - International Version ID
  */
 export const VID_3 = CWE.optional().register(hl7v2Metadata, {
-  "title": "VID.3",
-  "version": "2.6",
-  "description": "International Version ID",
-  "type": "DataType",
-  "length": 483,
-  "optionality": "O"
+  title: 'VID.3',
+  version: '2.6',
+  description: 'International Version ID',
+  type: 'DataType',
+  length: 483,
+  optionality: 'O',
 });
 
 /**
  * VID - HL7 v2.6 VID composite data type
- * 
+ *
  * Components:
  * - VID.1: Version ID (ID)
  * - VID.2: Internationalization Code (CWE)
  * - VID.3: International Version ID (CWE)
  */
-export const VID = z.object({
-  [`1`]: VID_1,
-  [`2`]: VID_2,
-  [`3`]: VID_3
-}).register(hl7v2Metadata, {
-  title: 'VID',
-  version: '2.6',
-  description: 'HL7 v2.6 VID composite data type'
-});
+export const VID = z
+  .object({
+    [`1`]: VID_1,
+    [`2`]: VID_2,
+    [`3`]: VID_3,
+  })
+  .register(hl7v2Metadata, {
+    title: 'VID',
+    version: '2.6',
+    description: 'HL7 v2.6 VID composite data type',
+  });
 
 /**
  * Type definition for VID

@@ -1,8 +1,8 @@
 /**
  * HL7 v2.2.6 Root Index
- * 
+ *
  * This file provides organized access to HL7 v2.2.6 schemas through subdirectories.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -11,7 +11,7 @@
 // Data Types - Access via subdirectory
 export * as datatypes from './datatypes';
 
-// Fields - Access via subdirectory  
+// Fields - Access via subdirectory
 export * as fields from './fields';
 
 // Segments - Access via subdirectory

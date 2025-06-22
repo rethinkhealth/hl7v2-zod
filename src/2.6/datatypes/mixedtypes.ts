@@ -3,10 +3,10 @@ import hl7v2Metadata from '../registry';
 
 /**
  * HL7 v2.6 Mixed Data Types
- * 
+ *
  * These are mixed data types used in HL7 v2.6 messages.
  * Mixed types can contain both text content and escape sequences.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -48,7 +48,7 @@ export const TX = z.string().register(hl7v2Metadata, {
 export const MixedTypes = {
   escapeType,
   FT,
-  TX
+  TX,
 } as const;
 
 /**

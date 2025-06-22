@@ -4,10 +4,10 @@ import * as fields from '../fields/lan';
 
 /**
  * HL7 v2.6 LAN Segment
- * 
+ *
  * HL7 v2.6 LAN segment definition
  * Contains field definitions and constraints for the LAN segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,17 +17,19 @@ import * as fields from '../fields/lan';
  * LAN segment schema
  * Defines the structure and validation rules for the LAN segment
  */
-export const lanSchema = z.object({
-  "1": fields.LAN_1,
-  "2": fields.LAN_2,
-  "3": z.array(fields.LAN_3).optional(),
-  "4": fields.LAN_4.optional()
-}).register(hl7v2Metadata, {
-  title: "LAN",
-  version: "2.6",
-  description: "HL7 v2.6 LAN segment",
-  type: "Segment"
-});
+export const lanSchema = z
+  .object({
+    '1': fields.LAN_1,
+    '2': fields.LAN_2,
+    '3': z.array(fields.LAN_3).optional(),
+    '4': fields.LAN_4.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'LAN',
+    version: '2.6',
+    description: 'HL7 v2.6 LAN segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the LAN schema

@@ -4,39 +4,39 @@ import * as segments from '../segments';
 
 /**
  * HL7 v2.6 ADT_A12 Message
- * 
+ *
  * HL7 v2.6 ADT_A12 message definition
  * Contains segment definitions and constraints for the ADT_A12 message.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
  */
 
-
-
 /**
  * ADT_A12 message schema
  * Defines the structure and validation rules for the ADT_A12 message
  */
-export const adt_a12Schema = z.object({
-  "MSH": segments.mshSchema,
-  "SFT": z.array(segments.sftSchema).optional(),
-  "UAC": segments.uacSchema.optional(),
-  "EVN": segments.evnSchema,
-  "PID": segments.pidSchema,
-  "PD1": segments.pd1Schema.optional(),
-  "PV1": segments.pv1Schema,
-  "PV2": segments.pv2Schema.optional(),
-  "DB1": z.array(segments.db1Schema).optional(),
-  "OBX": z.array(segments.obxSchema).optional(),
-  "DG1": segments.dg1Schema.optional()
-}).register(hl7v2Metadata, {
-  title: "ADT_A12",
-  version: "2.6",
-  description: "HL7 v2.6 ADT_A12 message",
-  type: "Message"
-});
+export const adt_a12Schema = z
+  .object({
+    MSH: segments.mshSchema,
+    SFT: z.array(segments.sftSchema).optional(),
+    UAC: segments.uacSchema.optional(),
+    EVN: segments.evnSchema,
+    PID: segments.pidSchema,
+    PD1: segments.pd1Schema.optional(),
+    PV1: segments.pv1Schema,
+    PV2: segments.pv2Schema.optional(),
+    DB1: z.array(segments.db1Schema).optional(),
+    OBX: z.array(segments.obxSchema).optional(),
+    DG1: segments.dg1Schema.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'ADT_A12',
+    version: '2.6',
+    description: 'HL7 v2.6 ADT_A12 message',
+    type: 'Message',
+  });
 
 /**
  * TypeScript type inferred from the ADT_A12 schema

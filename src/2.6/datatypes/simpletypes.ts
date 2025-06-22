@@ -3,10 +3,10 @@ import hl7v2Metadata from '../registry';
 
 /**
  * HL7 v2.6 Simple Data Types
- * 
+ *
  * These are the basic data types used in HL7 v2.6 messages.
  * All simple types are essentially string-based with specific semantic meanings.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -125,7 +125,7 @@ export const SimpleTypes = {
   SI,
   ST,
   TM,
-  VARIES
+  VARIES,
 } as const;
 
 /**

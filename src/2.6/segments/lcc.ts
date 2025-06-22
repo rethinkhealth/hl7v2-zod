@@ -4,10 +4,10 @@ import * as fields from '../fields/lcc';
 
 /**
  * HL7 v2.6 LCC Segment
- * 
+ *
  * HL7 v2.6 LCC segment definition
  * Contains field definitions and constraints for the LCC segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,17 +17,19 @@ import * as fields from '../fields/lcc';
  * LCC segment schema
  * Defines the structure and validation rules for the LCC segment
  */
-export const lccSchema = z.object({
-  "1": fields.LCC_1,
-  "2": fields.LCC_2,
-  "3": z.array(fields.LCC_3).optional(),
-  "4": z.array(fields.LCC_4)
-}).register(hl7v2Metadata, {
-  title: "LCC",
-  version: "2.6",
-  description: "HL7 v2.6 LCC segment",
-  type: "Segment"
-});
+export const lccSchema = z
+  .object({
+    '1': fields.LCC_1,
+    '2': fields.LCC_2,
+    '3': z.array(fields.LCC_3).optional(),
+    '4': z.array(fields.LCC_4),
+  })
+  .register(hl7v2Metadata, {
+    title: 'LCC',
+    version: '2.6',
+    description: 'HL7 v2.6 LCC segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the LCC schema

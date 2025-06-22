@@ -26,13 +26,6 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": true
   },
-  "include": [
-    "src/**/*"
-, "tests/index.test.ts"  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts",
-    "**/*.spec.ts"
-  ]
-} 
+  "include": ["src/**/*", "tests/index.test.ts"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+}

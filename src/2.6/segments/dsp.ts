@@ -4,10 +4,10 @@ import * as fields from '../fields/dsp';
 
 /**
  * HL7 v2.6 DSP Segment
- * 
+ *
  * HL7 v2.6 DSP segment definition
  * Contains field definitions and constraints for the DSP segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,18 +17,20 @@ import * as fields from '../fields/dsp';
  * DSP segment schema
  * Defines the structure and validation rules for the DSP segment
  */
-export const dspSchema = z.object({
-  "1": fields.DSP_1.optional(),
-  "2": fields.DSP_2.optional(),
-  "3": fields.DSP_3,
-  "4": fields.DSP_4.optional(),
-  "5": fields.DSP_5.optional()
-}).register(hl7v2Metadata, {
-  title: "DSP",
-  version: "2.6",
-  description: "HL7 v2.6 DSP segment",
-  type: "Segment"
-});
+export const dspSchema = z
+  .object({
+    '1': fields.DSP_1.optional(),
+    '2': fields.DSP_2.optional(),
+    '3': fields.DSP_3,
+    '4': fields.DSP_4.optional(),
+    '5': fields.DSP_5.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'DSP',
+    version: '2.6',
+    description: 'HL7 v2.6 DSP segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the DSP schema

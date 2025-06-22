@@ -4,10 +4,10 @@ import * as fields from '../fields/rdf';
 
 /**
  * HL7 v2.6 RDF Segment
- * 
+ *
  * HL7 v2.6 RDF segment definition
  * Contains field definitions and constraints for the RDF segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,15 +17,17 @@ import * as fields from '../fields/rdf';
  * RDF segment schema
  * Defines the structure and validation rules for the RDF segment
  */
-export const rdfSchema = z.object({
-  "1": fields.RDF_1,
-  "2": z.array(fields.RDF_2)
-}).register(hl7v2Metadata, {
-  title: "RDF",
-  version: "2.6",
-  description: "HL7 v2.6 RDF segment",
-  type: "Segment"
-});
+export const rdfSchema = z
+  .object({
+    '1': fields.RDF_1,
+    '2': z.array(fields.RDF_2),
+  })
+  .register(hl7v2Metadata, {
+    title: 'RDF',
+    version: '2.6',
+    description: 'HL7 v2.6 RDF segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the RDF schema

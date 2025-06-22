@@ -4,10 +4,10 @@ import * as fields from '../fields/apr';
 
 /**
  * HL7 v2.6 APR Segment
- * 
+ *
  * HL7 v2.6 APR segment definition
  * Contains field definitions and constraints for the APR segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,18 +17,20 @@ import * as fields from '../fields/apr';
  * APR segment schema
  * Defines the structure and validation rules for the APR segment
  */
-export const aprSchema = z.object({
-  "1": z.array(fields.APR_1).optional(),
-  "2": z.array(fields.APR_2).optional(),
-  "3": z.array(fields.APR_3).optional(),
-  "4": fields.APR_4.optional(),
-  "5": z.array(fields.APR_5).optional()
-}).register(hl7v2Metadata, {
-  title: "APR",
-  version: "2.6",
-  description: "HL7 v2.6 APR segment",
-  type: "Segment"
-});
+export const aprSchema = z
+  .object({
+    '1': z.array(fields.APR_1).optional(),
+    '2': z.array(fields.APR_2).optional(),
+    '3': z.array(fields.APR_3).optional(),
+    '4': fields.APR_4.optional(),
+    '5': z.array(fields.APR_5).optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'APR',
+    version: '2.6',
+    description: 'HL7 v2.6 APR segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the APR schema

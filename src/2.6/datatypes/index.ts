@@ -1,8 +1,8 @@
 /**
  * HL7 v2.6 Data Types Index
- * 
+ *
  * This file exports all data types (simple, mixed, and composite) for HL7 v2.6.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.

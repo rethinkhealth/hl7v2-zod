@@ -4,10 +4,10 @@ import * as fields from '../fields/blg';
 
 /**
  * HL7 v2.6 BLG Segment
- * 
+ *
  * HL7 v2.6 BLG segment definition
  * Contains field definitions and constraints for the BLG segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,17 +17,19 @@ import * as fields from '../fields/blg';
  * BLG segment schema
  * Defines the structure and validation rules for the BLG segment
  */
-export const blgSchema = z.object({
-  "1": fields.BLG_1.optional(),
-  "2": fields.BLG_2.optional(),
-  "3": fields.BLG_3.optional(),
-  "4": fields.BLG_4.optional()
-}).register(hl7v2Metadata, {
-  title: "BLG",
-  version: "2.6",
-  description: "HL7 v2.6 BLG segment",
-  type: "Segment"
-});
+export const blgSchema = z
+  .object({
+    '1': fields.BLG_1.optional(),
+    '2': fields.BLG_2.optional(),
+    '3': fields.BLG_3.optional(),
+    '4': fields.BLG_4.optional(),
+  })
+  .register(hl7v2Metadata, {
+    title: 'BLG',
+    version: '2.6',
+    description: 'HL7 v2.6 BLG segment',
+    type: 'Segment',
+  });
 
 /**
  * TypeScript type inferred from the BLG schema

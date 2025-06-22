@@ -5,10 +5,10 @@ import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.6 AD Composite Data Type
- * 
+ *
  * HL7 v2.6 AD composite data type
  * Each composite type consists of multiple components with specific types and constraints.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -18,101 +18,101 @@ import { MixedTypes } from './mixedtypes';
  * AD.1 - Street Address
  */
 export const AD_1 = SimpleTypes.ST.max(120).optional().register(hl7v2Metadata, {
-  "title": "AD.1",
-  "version": "2.6",
-  "description": "Street Address",
-  "type": "DataType",
-  "length": 120,
-  "optionality": "O"
+  title: 'AD.1',
+  version: '2.6',
+  description: 'Street Address',
+  type: 'DataType',
+  length: 120,
+  optionality: 'O',
 });
 
 /**
  * AD.2 - Other Designation
  */
 export const AD_2 = SimpleTypes.ST.max(120).optional().register(hl7v2Metadata, {
-  "title": "AD.2",
-  "version": "2.6",
-  "description": "Other Designation",
-  "type": "DataType",
-  "length": 120,
-  "optionality": "O"
+  title: 'AD.2',
+  version: '2.6',
+  description: 'Other Designation',
+  type: 'DataType',
+  length: 120,
+  optionality: 'O',
 });
 
 /**
  * AD.3 - City
  */
 export const AD_3 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
-  "title": "AD.3",
-  "version": "2.6",
-  "description": "City",
-  "type": "DataType",
-  "length": 50,
-  "optionality": "O"
+  title: 'AD.3',
+  version: '2.6',
+  description: 'City',
+  type: 'DataType',
+  length: 50,
+  optionality: 'O',
 });
 
 /**
  * AD.4 - State or Province
  */
 export const AD_4 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
-  "title": "AD.4",
-  "version": "2.6",
-  "description": "State or Province",
-  "type": "DataType",
-  "length": 50,
-  "optionality": "O"
+  title: 'AD.4',
+  version: '2.6',
+  description: 'State or Province',
+  type: 'DataType',
+  length: 50,
+  optionality: 'O',
 });
 
 /**
  * AD.5 - Zip or Postal Code
  */
 export const AD_5 = SimpleTypes.ST.max(12).optional().register(hl7v2Metadata, {
-  "title": "AD.5",
-  "version": "2.6",
-  "description": "Zip or Postal Code",
-  "type": "DataType",
-  "length": 12,
-  "optionality": "O"
+  title: 'AD.5',
+  version: '2.6',
+  description: 'Zip or Postal Code',
+  type: 'DataType',
+  length: 12,
+  optionality: 'O',
 });
 
 /**
  * AD.6 - Country
  */
 export const AD_6 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
-  "title": "AD.6",
-  "version": "2.6",
-  "description": "Country",
-  "type": "DataType",
-  "length": 3,
-  "optionality": "O"
+  title: 'AD.6',
+  version: '2.6',
+  description: 'Country',
+  type: 'DataType',
+  length: 3,
+  optionality: 'O',
 });
 
 /**
  * AD.7 - Address Type
  */
 export const AD_7 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
-  "title": "AD.7",
-  "version": "2.6",
-  "description": "Address Type",
-  "type": "DataType",
-  "length": 3,
-  "optionality": "O"
+  title: 'AD.7',
+  version: '2.6',
+  description: 'Address Type',
+  type: 'DataType',
+  length: 3,
+  optionality: 'O',
 });
 
 /**
  * AD.8 - Other Geographic Designation
  */
 export const AD_8 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
-  "title": "AD.8",
-  "version": "2.6",
-  "description": "Other Geographic Designation",
-  "type": "DataType",
-  "length": 50,
-  "optionality": "O"
+  title: 'AD.8',
+  version: '2.6',
+  description: 'Other Geographic Designation',
+  type: 'DataType',
+  length: 50,
+  optionality: 'O',
 });
 
 /**
  * AD - HL7 v2.6 AD composite data type
- * 
+ *
  * Components:
  * - AD.1: Street Address (ST)
  * - AD.2: Other Designation (ST)
@@ -123,20 +123,22 @@ export const AD_8 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
  * - AD.7: Address Type (ID)
  * - AD.8: Other Geographic Designation (ST)
  */
-export const AD = z.object({
-  [`1`]: AD_1,
-  [`2`]: AD_2,
-  [`3`]: AD_3,
-  [`4`]: AD_4,
-  [`5`]: AD_5,
-  [`6`]: AD_6,
-  [`7`]: AD_7,
-  [`8`]: AD_8
-}).register(hl7v2Metadata, {
-  title: 'AD',
-  version: '2.6',
-  description: 'HL7 v2.6 AD composite data type'
-});
+export const AD = z
+  .object({
+    [`1`]: AD_1,
+    [`2`]: AD_2,
+    [`3`]: AD_3,
+    [`4`]: AD_4,
+    [`5`]: AD_5,
+    [`6`]: AD_6,
+    [`7`]: AD_7,
+    [`8`]: AD_8,
+  })
+  .register(hl7v2Metadata, {
+    title: 'AD',
+    version: '2.6',
+    description: 'HL7 v2.6 AD composite data type',
+  });
 
 /**
  * Type definition for AD

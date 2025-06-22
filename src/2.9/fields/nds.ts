@@ -1,0 +1,66 @@
+import { z } from 'zod/v4';
+import hl7v2Metadata from '../registry';
+import * as datatypes from '../datatypes';
+
+/**
+ * HL7 v2.9 NDS Fields
+ * 
+ * HL7 v2.9 NDS field definitions
+ * Each field consists of specific types and constraints.
+ * 
+ * Generated using Zod v4 for improved performance and TypeScript efficiency.
+ *
+ * Includes HL7v2 metadata registration for enhanced validation and documentation.
+ */
+
+/**
+ * NDS.1 - Notification Reference Number
+ */
+export const NDS_1 = datatypes.NM.register(hl7v2Metadata, {
+  "title": "NDS.1",
+  "version": "2.9",
+  "description": "Notification Reference Number",
+  "type": "Field",
+  "item": 1398,
+  "table": "",
+  "longName": "HL7Notification Reference Number"
+});
+
+/**
+ * NDS.2 - Notification Date/Time
+ */
+export const NDS_2 = datatypes.DTM.register(hl7v2Metadata, {
+  "title": "NDS.2",
+  "version": "2.9",
+  "description": "Notification Date/Time",
+  "type": "Field",
+  "item": 1399,
+  "table": "",
+  "longName": "HL7Notification Date/Time"
+});
+
+/**
+ * NDS.3 - Notification Alert Severity
+ */
+export const NDS_3 = datatypes.CWE.register(hl7v2Metadata, {
+  "title": "NDS.3",
+  "version": "2.9",
+  "description": "Notification Alert Severity",
+  "type": "Field",
+  "item": 1400,
+  "table": "HL70367",
+  "longName": "HL7Notification Alert Severity"
+});
+
+/**
+ * NDS.4 - Notification Code
+ */
+export const NDS_4 = datatypes.CWE.register(hl7v2Metadata, {
+  "title": "NDS.4",
+  "version": "2.9",
+  "description": "Notification Code",
+  "type": "Field",
+  "item": 1401,
+  "table": "HL70610",
+  "longName": "HL7Notification Code"
+});

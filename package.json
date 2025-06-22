@@ -1,0 +1,60 @@
+{
+  "name": "@rethinkhealth/hl7v2-zod",
+  "version": "1.0.0",
+  "description": "HL7v2 Zod schemas for type-safe HL7v2 message parsing and validation",
+  "keywords": ["hl7", "hl7v2", "zod", "schemas", "healthcare", "medical", "validation"],
+  "author": "Rethink Health",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "test": "vitest",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.0",
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "zod": "^3.25.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.25.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rethinkhealth/hl7v2-zod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rethinkhealth/hl7v2-zod/issues"
+  },
+  "homepage": "https://github.com/rethinkhealth/hl7v2-zod#readme"
+}

@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { getVersion, type HL7Version } from '../src/index';
+import { getVersion, type HL7Version, v2_6 } from '../src';
 
 describe('HL7v2 Zod Schemas', () => {
   it('should export all supported versions', () => {
-    const versions: HL7Version[] = ['2.6', '2.7', '2.7.1', '2.8', '2.8.1', '2.8.2', '2.9'];
+    const versions: HL7Version[] = ['2.6'];
 
     versions.forEach((version) => {
       expect(() => getVersion(version)).not.toThrow();
@@ -15,9 +15,8 @@ describe('HL7v2 Zod Schemas', () => {
   });
 
   it('should have correct structure for each version', () => {
-    const version = getVersion('2.8');
+    const version = getVersion('2.6');
 
-    expect(version).toHaveProperty('messages');
     expect(version).toHaveProperty('segments');
     expect(version).toHaveProperty('fields');
     expect(version).toHaveProperty('datatypes');

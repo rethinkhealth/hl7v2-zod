@@ -1,18 +1,24 @@
 import { defineConfig } from 'tsup';
+import fs from 'node:fs';
+
+// Retrieve all the folders in the src directory
+const folders = fs.readdirSync('src').filter(file => fs.statSync(`src/${file}`).isDirectory());
 
 export default defineConfig({
   entry: {
     'index': 'src/index.ts',
-    '2.6/index': 'src/2.6/index.ts',
-    '2.8/index': 'src/2.8/index.ts',
+    ...folders.reduce((acc, folder) => {
+      acc[`${folder}/index`] = `src/${folder}/index.ts`;
+      return acc;
+    }, {} as Record<string, string>),
   },
   format: ['cjs', 'esm'],
   dts: true,
-  splitting: false,
-  sourcemap: true,
+  splitting: true,
+  sourcemap: false,
   clean: true,
   treeshake: true,
-  minify: false,
+  minify: true,
   external: ['zod', 'zod/v4'],
   onSuccess: 'tsc --noEmit',
 });

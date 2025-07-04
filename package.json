@@ -14,6 +14,16 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./2.6": {
+      "types": "./dist/2.6/index.d.ts",
+      "import": "./dist/2.6/index.mjs",
+      "require": "./dist/2.6/index.js"
+    },
+    "./2.8": {
+      "types": "./dist/2.8/index.d.ts",
+      "import": "./dist/2.8/index.mjs",
+      "require": "./dist/2.8/index.js"
     }
   },
   "files": ["dist", "README.md", "LICENSE"],

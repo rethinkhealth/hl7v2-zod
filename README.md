@@ -5,11 +5,12 @@ Type-safe HL7v2 message parsing and validation using Zod v4 schemas.
 ## Features
 
 - **Type-safe validation**: Full TypeScript support with Zod v4 schemas for all HL7v2 message types
-- **Multiple HL7 versions**: Support for HL7v2 versions 2.3.1, 2.4, 2.5, 2.5.1, 2.6, 2.7, 2.7.1, 2.8, 2.8.1, 2.8.2, and 2.9
+- **Multiple HL7 versions**: Support for HL7v2 versions 2.6 and 2.8
 - **Comprehensive coverage**: Includes all message types, segments, fields, and data types for each version
 - **Zero dependencies**: Only requires Zod v4 as a peer dependency
-- **Tree-shakable**: Import only the schemas you need
+- **Tree-shakable**: Import only the schemas you need with subpath imports
 - **Zod v4 optimized**: Built with the latest Zod v4 features for better performance and TypeScript efficiency
+- **Optimal performance**: Use subpath imports to include only the HL7 version you need
 
 ## Installation
 
@@ -26,103 +27,75 @@ pnpm add @rethinkhealth/hl7v2-zod zod@^3.25.0
 ## Quick Start
 
 ```typescript
-import { v2_8, getVersion } from '@rethinkhealth/hl7v2-zod'
+// Import directly from the specific HL7 version you need
+import { ADT_A01 } from '@rethinkhealth/hl7v2-zod/2.8'
 
 // Parse and validate an ADT_A01 message
-const hl7Message = `MSH|^~\\&|SENDING_APP|SENDING_FACILITY|RECEIVING_APP|RECEIVING_FACILITY|20231201120000||ADT^A01|MSG00001|P|2.8|
-EVN|A01|20231201120000
-PID|1||12345^^^MRN||DOE^JOHN^^^^||19800101|M|||123 MAIN ST^^ANYTOWN^ST^12345^USA
-PV1|1|I|2000^2012^01||||123456^SMITH^JANE^J^^^MD|123456^SMITH^JANE^J^^^MD|||||||||||I|1783332658^BMT|||||||||||||||||||||||||||20231201120000`
+const hl7Message = {
+  MSH: {
+    "1": "|",
+    "2": "",
+  },
+  // ...
+}
 
 try {
-  const result = v2_8.messages.ADT_A01.parse(hl7Message)
+  const result = ADT_A01.parse(hl7Message)
   console.log('Valid HL7 message:', result)
 } catch (error) {
   console.error('Invalid HL7 message:', error)
 }
-
-// Or get a specific version dynamically
-const schemas = getVersion('2.8')
-const result = schemas.messages.ADT_A01.parse(hl7Message)
 ```
 
 ## Usage
 
-### Accessing Different HL7 Versions
+Import directly from the specific HL7 version for optimal performance:
 
 ```typescript
-import { v2_3_1, v2_4, v2_5, v2_8, v2_9 } from '@rethinkhealth/hl7v2-zod'
+// HL7v2.6
+import { ADT_A01, MSH, PID } from '@rethinkhealth/hl7v2-zod/2.6'
 
-// Use specific version schemas
-const adtA01_v2_8 = v2_8.messages.ADT_A01
-const adtA01_v2_9 = v2_9.messages.ADT_A01
+// HL7v2.8
+import { ADT_A01, MSH, PID } from '@rethinkhealth/hl7v2-zod/2.8'
 
-// Access segments, fields, and data types
-const mshSegment = v2_8.segments.MSH
-const pidSegment = v2_8.segments.PID
-const adDataType = v2_8.datatypes.AD
-```
-
-### Dynamic Version Selection
-
-```typescript
-import { getVersion, type HL7Version } from '@rethinkhealth/hl7v2-zod'
-
-function validateMessage(message: string, version: HL7Version) {
-  const schemas = getVersion(version)
-  return schemas.messages.ADT_A01.parse(message)
-}
-
-// Usage
-const result = validateMessage(hl7Message, '2.8')
+// Access segments and data types
+import { MSH, PID, PV1 } from '@rethinkhealth/hl7v2-zod/2.8'
+import { AD, CE, CX } from '@rethinkhealth/hl7v2-zod/2.8/datatypes'
 ```
 
 ### Working with Segments and Fields
 
 ```typescript
-import { v2_8 } from '@rethinkhealth/hl7v2-zod'
+import { MSH, PID } from '@rethinkhealth/hl7v2-zod/2.8'
 
 // Validate individual segments
-const mshData = v2_8.segments.MSH.parse('MSH|^~\\&|APP|FACILITY|RECV_APP|RECV_FAC|20231201120000||ADT^A01|MSG00001|P|2.8|')
-
-// Validate data types
-const addressData = v2_8.datatypes.AD.parse('123 MAIN ST^^ANYTOWN^ST^12345^USA')
-
-// Access field definitions
-const pidFields = v2_8.fields.PID
+const mshData = MSH.parse({
+  "1": "|",
+  // ... etc
+})
 ```
 
 ## API Reference
 
-### Main Exports
+### Subpath Exports
 
-- `v2_3_1`, `v2_4`, `v2_5`, `v2_5_1`, `v2_6`, `v2_7`, `v2_7_1`, `v2_8`, `v2_8_1`, `v2_8_2`, `v2_9`: Namespaced exports for each HL7 version
-- `getVersion(version: HL7Version)`: Function to get schemas for a specific version
-- `HL7Version`: TypeScript type for supported HL7 versions
+- `@rethinkhealth/hl7v2-zod/2.6`: All HL7v2.6 schemas
+- `@rethinkhealth/hl7v2-zod/2.8`: All HL7v2.8 schemas
 
 ### Version Structure
 
 Each version export contains:
 
-- `messages`: All HL7 message type schemas (e.g., `ADT_A01`, `ORU_R01`)
-- `segments`: All HL7 segment schemas (e.g., `MSH`, `PID`, `PV1`)
-- `fields`: All HL7 field schemas
-- `datatypes`: All HL7 data type schemas (e.g., `AD`, `CE`, `CX`)
-- `hl7v2Metadata`: Registry metadata for the version
+- **Message schemas**: All HL7 message type schemas (e.g., `ADT_A01`, `ORU_R01`)
+- **Segment schemas**: All HL7 segment schemas (e.g., `MSH`, `PID`, `PV1`)
+- **Field schemas**: All HL7 field schemas
+- **Data type schemas**: All HL7 data type schemas (e.g., `AD`, `CE`, `CX`)
+- **Metadata**: Registry metadata for the version
 
 ## Supported HL7v2 Versions
 
-- **2.3.1**: HL7v2.3.1 (1996)
-- **2.4**: HL7v2.4 (2000)
-- **2.5**: HL7v2.5 (2003)
-- **2.5.1**: HL7v2.5.1 (2007)
 - **2.6**: HL7v2.6 (2007)
-- **2.7**: HL7v2.7 (2011)
-- **2.7.1**: HL7v2.7.1 (2013)
 - **2.8**: HL7v2.8 (2015)
-- **2.8.1**: HL7v2.8.1 (2016)
-- **2.8.2**: HL7v2.8.2 (2018)
-- **2.9**: HL7v2.9 (2019)
 
 ## Zod v4 Benefits
 
@@ -135,6 +108,8 @@ This package is built with [Zod v4](https://zod.dev/v4), which provides:
 - **2x reduction in bundle size**
 - **Improved error customization**
 - **Better discriminated union support**
+
+To learn more, please check [the official documentation](https://zod.dev/v4).
 
 ## Development
 
@@ -182,18 +157,9 @@ pnpm test
 
 ```
 src/
-├── 2.3.1/          # HL7v2.3.1 schemas
-├── 2.4/            # HL7v2.4 schemas
-├── 2.5/            # HL7v2.5 schemas
-├── 2.5.1/          # HL7v2.5.1 schemas
 ├── 2.6/            # HL7v2.6 schemas
-├── 2.7/            # HL7v2.7 schemas
-├── 2.7.1/          # HL7v2.7.1 schemas
 ├── 2.8/            # HL7v2.8 schemas
-├── 2.8.1/          # HL7v2.8.1 schemas
-├── 2.8.2/          # HL7v2.8.2 schemas
-├── 2.9/            # HL7v2.9 schemas
-└── index.ts        # Main entry point
+└── index.ts        # Main entry point (utility functions)
 ```
 
 Each version directory contains:
@@ -225,5 +191,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Related Projects
 
 - [Zod v4](https://zod.dev/v4) - TypeScript-first schema validation with improved performance
-- [Zod](https://github.com/colinhacks/zod) - TypeScript-first schema validation
 - [HL7 FHIR](https://www.hl7.org/fhir/) - Modern healthcare data standard 

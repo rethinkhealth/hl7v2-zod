@@ -68,7 +68,11 @@
     "check": "biome check .",
     "check:fix": "biome check --write .",
     "test": "vitest",
-    "prepublishOnly": "npm run clean && npm run build"
+    "prepublishOnly": "npm run clean && npm run build",
+    "ci:install": "pnpm install --no-frozen-lockfile",
+    "ci:publish": "pnpm build && pnpm recursive publish --no-git-checks",
+    "ci:update": "pnpm --recursive update",
+    "ci:version": "pnpm changeset version"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",

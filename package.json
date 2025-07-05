@@ -1,6 +1,6 @@
 {
   "name": "@rethinkhealth/hl7v2-zod",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "HL7v2 Zod schemas for type-safe HL7v2 message parsing and validation",
   "keywords": [
     "hl7",

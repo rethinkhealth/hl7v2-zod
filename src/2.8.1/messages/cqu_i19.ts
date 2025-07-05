@@ -778,7 +778,7 @@ export type CQU_I19_APPOINTMENT_HISTORY = z.infer<typeof cquI19AppointmentHistor
  * CQU_I19 message schema
  * Defines the structure and validation rules for the CQU_I19 message
  */
-export const cqu_i19Schema = z
+export const cqu_i19Schema: z.ZodTypeAny = z
   .object({
     MSH: segments.mshSchema,
     SFT: z.array(segments.sftSchema).optional(),

@@ -7,7 +7,6 @@ const folders = fs.readdirSync("src").filter((file) => fs.statSync(`src/${file}`
 export default defineConfig({
   entry: {
     index: "src/index.ts",
-    // '2.3.1/index': 'src/2.3.1/index.ts',
     ...folders.reduce(
       (acc, folder) => {
         acc[`${folder}/index`] = `src/${folder}/index.ts`;
@@ -17,7 +16,7 @@ export default defineConfig({
     )
   },
   format: ["cjs", "esm"],
-  dts: true,
+  dts: false,
   splitting: true,
   sourcemap: false,
   clean: true,

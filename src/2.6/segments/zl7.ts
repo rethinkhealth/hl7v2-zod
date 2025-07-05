@@ -1,12 +1,12 @@
-import { z } from 'zod/v4';
-import hl7v2Metadata from '../registry';
+import { z } from "zod/v4";
+import hl7v2Metadata from "../registry";
 
 /**
  * HL7 v2.6 ZL7 Segment
- * 
+ *
  * HL7 v2.6 ZL7 segment definition
  * Contains field definitions and constraints for the ZL7 segment.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.

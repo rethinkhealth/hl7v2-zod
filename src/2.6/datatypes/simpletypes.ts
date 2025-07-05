@@ -1,12 +1,12 @@
-import { z } from 'zod/v4';
-import hl7v2Metadata from '../registry';
+import { z } from "zod/v4";
+import hl7v2Metadata from "../registry";
 
 /**
  * HL7 v2.6 Simple Data Types
- * 
+ *
  * These are the basic data types used in HL7 v2.6 messages.
  * All simple types are essentially string-based with specific semantic meanings.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -16,100 +16,100 @@ import hl7v2Metadata from '../registry';
  * DT - HL7 Date format (YYYY[MM[DD]])
  */
 export const DT = z.string().max(8).register(hl7v2Metadata, {
-  title: 'DT',
-  version: '2.6',
-  description: 'HL7 Date format (YYYY[MM[DD]])',
-  length: 8,
+  title: "DT",
+  version: "2.6",
+  description: "HL7 Date format (YYYY[MM[DD]])",
+  length: 8
 });
 
 /**
  * DTM - HL7 Date/Time format (YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]][+/-ZZZZ])
  */
 export const DTM = z.string().max(24).register(hl7v2Metadata, {
-  title: 'DTM',
-  version: '2.6',
-  description: 'HL7 Date/Time format (YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]][+/-ZZZZ])',
-  length: 24,
+  title: "DTM",
+  version: "2.6",
+  description: "HL7 Date/Time format (YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]][+/-ZZZZ])",
+  length: 24
 });
 
 /**
  * GTS - General Timing Specification
  */
 export const GTS = z.string().register(hl7v2Metadata, {
-  title: 'GTS',
-  version: '2.6',
-  description: 'General Timing Specification',
-  length: undefined,
+  title: "GTS",
+  version: "2.6",
+  description: "General Timing Specification",
+  length: undefined
 });
 
 /**
  * ID - Coded Value for HL7 Defined Tables
  */
 export const ID = z.string().register(hl7v2Metadata, {
-  title: 'ID',
-  version: '2.6',
-  description: 'Coded Value for HL7 Defined Tables',
-  length: undefined,
+  title: "ID",
+  version: "2.6",
+  description: "Coded Value for HL7 Defined Tables",
+  length: undefined
 });
 
 /**
  * IS - Coded Value for User-Defined Tables
  */
 export const IS = z.string().register(hl7v2Metadata, {
-  title: 'IS',
-  version: '2.6',
-  description: 'Coded Value for User-Defined Tables',
-  length: undefined,
+  title: "IS",
+  version: "2.6",
+  description: "Coded Value for User-Defined Tables",
+  length: undefined
 });
 
 /**
  * NM - Numeric value as string
  */
 export const NM = z.string().register(hl7v2Metadata, {
-  title: 'NM',
-  version: '2.6',
-  description: 'Numeric value as string',
-  length: undefined,
+  title: "NM",
+  version: "2.6",
+  description: "Numeric value as string",
+  length: undefined
 });
 
 /**
  * SI - Sequence ID
  */
 export const SI = z.string().register(hl7v2Metadata, {
-  title: 'SI',
-  version: '2.6',
-  description: 'Sequence ID',
-  length: undefined,
+  title: "SI",
+  version: "2.6",
+  description: "Sequence ID",
+  length: undefined
 });
 
 /**
  * ST - String Data
  */
 export const ST = z.string().register(hl7v2Metadata, {
-  title: 'ST',
-  version: '2.6',
-  description: 'String Data',
-  length: undefined,
+  title: "ST",
+  version: "2.6",
+  description: "String Data",
+  length: undefined
 });
 
 /**
  * TM - HL7 Time format (HH[MM[SS[.S[S[S[S]]]]]][+/-ZZZZ])
  */
 export const TM = z.string().max(16).register(hl7v2Metadata, {
-  title: 'TM',
-  version: '2.6',
-  description: 'HL7 Time format (HH[MM[SS[.S[S[S[S]]]]]][+/-ZZZZ])',
-  length: 16,
+  title: "TM",
+  version: "2.6",
+  description: "HL7 Time format (HH[MM[SS[.S[S[S[S]]]]]][+/-ZZZZ])",
+  length: 16
 });
 
 /**
  * VARIES - Variable data type (can be any type)
  */
 export const VARIES = z.any().register(hl7v2Metadata, {
-  title: 'VARIES',
-  version: '2.6',
-  description: 'Variable data type (can be any type)',
-  length: undefined,
+  title: "VARIES",
+  version: "2.6",
+  description: "Variable data type (can be any type)",
+  length: undefined
 });
 
 /**

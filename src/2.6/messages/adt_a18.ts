@@ -1,38 +1,38 @@
-import { z } from 'zod/v4';
-import hl7v2Metadata from '../registry';
-import * as segments from '../segments';
+import { z } from "zod/v4";
+import hl7v2Metadata from "../registry";
+import * as segments from "../segments";
 
 /**
  * HL7 v2.6 ADT_A18 Message
- * 
+ *
  * HL7 v2.6 ADT_A18 message definition
  * Contains segment definitions and constraints for the ADT_A18 message.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
  */
 
-
-
 /**
  * ADT_A18 message schema
  * Defines the structure and validation rules for the ADT_A18 message
  */
-export const adt_a18Schema = z.object({
-  "MSH": segments.mshSchema,
-  "SFT": z.array(segments.sftSchema).optional(),
-  "EVN": segments.evnSchema,
-  "PID": segments.pidSchema,
-  "PD1": segments.pd1Schema.optional(),
-  "MRG": segments.mrgSchema,
-  "PV1": segments.pv1Schema
-}).register(hl7v2Metadata, {
-  title: "ADT_A18",
-  version: "2.6",
-  description: "HL7 v2.6 ADT_A18 message",
-  type: "Message"
-});
+export const adt_a18Schema = z
+  .object({
+    MSH: segments.mshSchema,
+    SFT: z.array(segments.sftSchema).optional(),
+    EVN: segments.evnSchema,
+    PID: segments.pidSchema,
+    PD1: segments.pd1Schema.optional(),
+    MRG: segments.mrgSchema,
+    PV1: segments.pv1Schema
+  })
+  .register(hl7v2Metadata, {
+    title: "ADT_A18",
+    version: "2.6",
+    description: "HL7 v2.6 ADT_A18 message",
+    type: "Message"
+  });
 
 /**
  * TypeScript type inferred from the ADT_A18 schema

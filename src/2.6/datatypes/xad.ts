@@ -1,15 +1,15 @@
-import { z } from 'zod/v4';
-import hl7v2Metadata from '../registry';
-import { SimpleTypes } from './simpletypes';
-import { SAD } from './sad';
-import { CWE } from './cwe';
+import { z } from "zod/v4";
+import hl7v2Metadata from "../registry";
+import { SimpleTypes } from "./simpletypes";
+import { SAD } from "./sad";
+import { CWE } from "./cwe";
 
 /**
  * HL7 v2.6 XAD Composite Data Type
- * 
+ *
  * HL7 v2.6 XAD composite data type
  * Each composite type consists of multiple components with specific types and constraints.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -19,281 +19,281 @@ import { CWE } from './cwe';
  * XAD.1 - Street Address
  */
 export const XAD_1 = SAD.optional().register(hl7v2Metadata, {
-  "title": "XAD.1",
-  "version": "2.6",
-  "description": "Street Address",
-  "type": "DataType",
-  "length": 184,
-  "optionality": "O"
+  title: "XAD.1",
+  version: "2.6",
+  description: "Street Address",
+  type: "DataType",
+  length: 184,
+  optionality: "O"
 });
 
 /**
  * XAD.2 - Other Designation
  */
 export const XAD_2 = SimpleTypes.ST.max(120).optional().register(hl7v2Metadata, {
-  "title": "XAD.2",
-  "version": "2.6",
-  "description": "Other Designation",
-  "type": "DataType",
-  "length": 120,
-  "optionality": "O"
+  title: "XAD.2",
+  version: "2.6",
+  description: "Other Designation",
+  type: "DataType",
+  length: 120,
+  optionality: "O"
 });
 
 /**
  * XAD.3 - City
  */
 export const XAD_3 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
-  "title": "XAD.3",
-  "version": "2.6",
-  "description": "City",
-  "type": "DataType",
-  "length": 50,
-  "optionality": "O"
+  title: "XAD.3",
+  version: "2.6",
+  description: "City",
+  type: "DataType",
+  length: 50,
+  optionality: "O"
 });
 
 /**
  * XAD.4 - State or Province
  */
 export const XAD_4 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
-  "title": "XAD.4",
-  "version": "2.6",
-  "description": "State or Province",
-  "type": "DataType",
-  "length": 50,
-  "optionality": "O"
+  title: "XAD.4",
+  version: "2.6",
+  description: "State or Province",
+  type: "DataType",
+  length: 50,
+  optionality: "O"
 });
 
 /**
  * XAD.5 - Zip or Postal Code
  */
 export const XAD_5 = SimpleTypes.ST.max(12).optional().register(hl7v2Metadata, {
-  "title": "XAD.5",
-  "version": "2.6",
-  "description": "Zip or Postal Code",
-  "type": "DataType",
-  "length": 12,
-  "optionality": "O"
+  title: "XAD.5",
+  version: "2.6",
+  description: "Zip or Postal Code",
+  type: "DataType",
+  length: 12,
+  optionality: "O"
 });
 
 /**
  * XAD.6 - Country
  */
 export const XAD_6 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
-  "title": "XAD.6",
-  "version": "2.6",
-  "description": "Country",
-  "type": "DataType",
-  "length": 3,
-  "optionality": "O"
+  title: "XAD.6",
+  version: "2.6",
+  description: "Country",
+  type: "DataType",
+  length: 3,
+  optionality: "O"
 });
 
 /**
  * XAD.7 - Address Type
  */
 export const XAD_7 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
-  "title": "XAD.7",
-  "version": "2.6",
-  "description": "Address Type",
-  "type": "DataType",
-  "length": 3,
-  "optionality": "O"
+  title: "XAD.7",
+  version: "2.6",
+  description: "Address Type",
+  type: "DataType",
+  length: 3,
+  optionality: "O"
 });
 
 /**
  * XAD.8 - Other Geographic Designation
  */
 export const XAD_8 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
-  "title": "XAD.8",
-  "version": "2.6",
-  "description": "Other Geographic Designation",
-  "type": "DataType",
-  "length": 50,
-  "optionality": "O"
+  title: "XAD.8",
+  version: "2.6",
+  description: "Other Geographic Designation",
+  type: "DataType",
+  length: 50,
+  optionality: "O"
 });
 
 /**
  * XAD.9 - County/Parish Code
  */
 export const XAD_9 = SimpleTypes.IS.max(20).optional().register(hl7v2Metadata, {
-  "title": "XAD.9",
-  "version": "2.6",
-  "description": "County/Parish Code",
-  "type": "DataType",
-  "length": 20,
-  "optionality": "O"
+  title: "XAD.9",
+  version: "2.6",
+  description: "County/Parish Code",
+  type: "DataType",
+  length: 20,
+  optionality: "O"
 });
 
 /**
  * XAD.10 - Census Tract
  */
 export const XAD_10 = SimpleTypes.IS.max(20).optional().register(hl7v2Metadata, {
-  "title": "XAD.10",
-  "version": "2.6",
-  "description": "Census Tract",
-  "type": "DataType",
-  "length": 20,
-  "optionality": "O"
+  title: "XAD.10",
+  version: "2.6",
+  description: "Census Tract",
+  type: "DataType",
+  length: 20,
+  optionality: "O"
 });
 
 /**
  * XAD.11 - Address Representation Code
  */
 export const XAD_11 = SimpleTypes.ID.max(1).optional().register(hl7v2Metadata, {
-  "title": "XAD.11",
-  "version": "2.6",
-  "description": "Address Representation Code",
-  "type": "DataType",
-  "length": 1,
-  "optionality": "O"
+  title: "XAD.11",
+  version: "2.6",
+  description: "Address Representation Code",
+  type: "DataType",
+  length: 1,
+  optionality: "O"
 });
 
 /**
  * XAD.12 - Address Validity Range
  */
 export const XAD_12 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
-  "title": "XAD.12",
-  "version": "2.6",
-  "description": "Address Validity Range",
-  "type": "DataType",
-  "length": 49,
-  "optionality": "O"
+  title: "XAD.12",
+  version: "2.6",
+  description: "Address Validity Range",
+  type: "DataType",
+  length: 49,
+  optionality: "O"
 });
 
 /**
  * XAD.13 - Effective Date
  */
 export const XAD_13 = SimpleTypes.DTM.max(24).optional().register(hl7v2Metadata, {
-  "title": "XAD.13",
-  "version": "2.6",
-  "description": "Effective Date",
-  "type": "DataType",
-  "length": 24,
-  "optionality": "O"
+  title: "XAD.13",
+  version: "2.6",
+  description: "Effective Date",
+  type: "DataType",
+  length: 24,
+  optionality: "O"
 });
 
 /**
  * XAD.14 - Expiration Date
  */
 export const XAD_14 = SimpleTypes.DTM.max(24).optional().register(hl7v2Metadata, {
-  "title": "XAD.14",
-  "version": "2.6",
-  "description": "Expiration Date",
-  "type": "DataType",
-  "length": 24,
-  "optionality": "O"
+  title: "XAD.14",
+  version: "2.6",
+  description: "Expiration Date",
+  type: "DataType",
+  length: 24,
+  optionality: "O"
 });
 
 /**
  * XAD.15 - Expiration Reason
  */
 export const XAD_15 = CWE.optional().register(hl7v2Metadata, {
-  "title": "XAD.15",
-  "version": "2.6",
-  "description": "Expiration Reason",
-  "type": "DataType",
-  "length": 705,
-  "optionality": "O"
+  title: "XAD.15",
+  version: "2.6",
+  description: "Expiration Reason",
+  type: "DataType",
+  length: 705,
+  optionality: "O"
 });
 
 /**
  * XAD.16 - Temporary Indicator
  */
 export const XAD_16 = SimpleTypes.ID.max(1).optional().register(hl7v2Metadata, {
-  "title": "XAD.16",
-  "version": "2.6",
-  "description": "Temporary Indicator",
-  "type": "DataType",
-  "length": 1,
-  "optionality": "O"
+  title: "XAD.16",
+  version: "2.6",
+  description: "Temporary Indicator",
+  type: "DataType",
+  length: 1,
+  optionality: "O"
 });
 
 /**
  * XAD.17 - Bad Address Indicator
  */
 export const XAD_17 = SimpleTypes.ID.max(1).optional().register(hl7v2Metadata, {
-  "title": "XAD.17",
-  "version": "2.6",
-  "description": "Bad Address Indicator",
-  "type": "DataType",
-  "length": 1,
-  "optionality": "O"
+  title: "XAD.17",
+  version: "2.6",
+  description: "Bad Address Indicator",
+  type: "DataType",
+  length: 1,
+  optionality: "O"
 });
 
 /**
  * XAD.18 - Address Usage
  */
 export const XAD_18 = SimpleTypes.ID.max(44).optional().register(hl7v2Metadata, {
-  "title": "XAD.18",
-  "version": "2.6",
-  "description": "Address Usage",
-  "type": "DataType",
-  "length": 44,
-  "optionality": "O"
+  title: "XAD.18",
+  version: "2.6",
+  description: "Address Usage",
+  type: "DataType",
+  length: 44,
+  optionality: "O"
 });
 
 /**
  * XAD.19 - Addressee
  */
 export const XAD_19 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata, {
-  "title": "XAD.19",
-  "version": "2.6",
-  "description": "Addressee",
-  "type": "DataType",
-  "length": 199,
-  "optionality": "O"
+  title: "XAD.19",
+  version: "2.6",
+  description: "Addressee",
+  type: "DataType",
+  length: 199,
+  optionality: "O"
 });
 
 /**
  * XAD.20 - Comment
  */
 export const XAD_20 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata, {
-  "title": "XAD.20",
-  "version": "2.6",
-  "description": "Comment",
-  "type": "DataType",
-  "length": 199,
-  "optionality": "O"
+  title: "XAD.20",
+  version: "2.6",
+  description: "Comment",
+  type: "DataType",
+  length: 199,
+  optionality: "O"
 });
 
 /**
  * XAD.21 - Preference Order
  */
 export const XAD_21 = SimpleTypes.NM.max(2).optional().register(hl7v2Metadata, {
-  "title": "XAD.21",
-  "version": "2.6",
-  "description": "Preference Order",
-  "type": "DataType",
-  "length": 2,
-  "optionality": "O"
+  title: "XAD.21",
+  version: "2.6",
+  description: "Preference Order",
+  type: "DataType",
+  length: 2,
+  optionality: "O"
 });
 
 /**
  * XAD.22 - Protection Code
  */
 export const XAD_22 = CWE.optional().register(hl7v2Metadata, {
-  "title": "XAD.22",
-  "version": "2.6",
-  "description": "Protection Code",
-  "type": "DataType",
-  "length": 705,
-  "optionality": "O"
+  title: "XAD.22",
+  version: "2.6",
+  description: "Protection Code",
+  type: "DataType",
+  length: 705,
+  optionality: "O"
 });
 
 /**
  * XAD.23 - Address Identifier
  */
 export const XAD_23 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
-  "title": "XAD.23",
-  "version": "2.6",
-  "description": "Address Identifier",
-  "type": "DataType",
-  "length": 427,
-  "optionality": "O"
+  title: "XAD.23",
+  version: "2.6",
+  description: "Address Identifier",
+  type: "DataType",
+  length: 427,
+  optionality: "O"
 });
 
 /**
  * XAD - HL7 v2.6 XAD composite data type
- * 
+ *
  * Components:
  * - XAD.1: Street Address (SAD)
  * - XAD.2: Other Designation (ST)
@@ -319,35 +319,37 @@ export const XAD_23 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - XAD.22: Protection Code (CWE)
  * - XAD.23: Address Identifier (EI)
  */
-export const XAD = z.object({
-  "1": XAD_1,
-  "2": XAD_2,
-  "3": XAD_3,
-  "4": XAD_4,
-  "5": XAD_5,
-  "6": XAD_6,
-  "7": XAD_7,
-  "8": XAD_8,
-  "9": XAD_9,
-  "10": XAD_10,
-  "11": XAD_11,
-  "12": XAD_12,
-  "13": XAD_13,
-  "14": XAD_14,
-  "15": XAD_15,
-  "16": XAD_16,
-  "17": XAD_17,
-  "18": XAD_18,
-  "19": XAD_19,
-  "20": XAD_20,
-  "21": XAD_21,
-  "22": XAD_22,
-  "23": XAD_23
-}).register(hl7v2Metadata, {
-  title: 'XAD',
-  version: '2.6',
-  description: 'HL7 v2.6 XAD composite data type'
-});
+export const XAD = z
+  .object({
+    "1": XAD_1,
+    "2": XAD_2,
+    "3": XAD_3,
+    "4": XAD_4,
+    "5": XAD_5,
+    "6": XAD_6,
+    "7": XAD_7,
+    "8": XAD_8,
+    "9": XAD_9,
+    "10": XAD_10,
+    "11": XAD_11,
+    "12": XAD_12,
+    "13": XAD_13,
+    "14": XAD_14,
+    "15": XAD_15,
+    "16": XAD_16,
+    "17": XAD_17,
+    "18": XAD_18,
+    "19": XAD_19,
+    "20": XAD_20,
+    "21": XAD_21,
+    "22": XAD_22,
+    "23": XAD_23
+  })
+  .register(hl7v2Metadata, {
+    title: "XAD",
+    version: "2.6",
+    description: "HL7 v2.6 XAD composite data type"
+  });
 
 /**
  * Type definition for XAD

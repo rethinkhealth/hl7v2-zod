@@ -1,13 +1,13 @@
-import { z } from 'zod/v4';
-import hl7v2Metadata from '../registry';
-import * as segments from '../segments';
+import { z } from "zod/v4";
+import hl7v2Metadata from "../registry";
+import * as segments from "../segments";
 
 /**
  * HL7 v2.6 SSU_U03 Message
- * 
+ *
  * HL7 v2.6 SSU_U03 message definition
  * Contains segment definitions and constraints for the SSU_U03 message.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,15 +17,17 @@ import * as segments from '../segments';
  * SSU_U03.SPECIMEN group schema
  * Defines the structure and validation rules for the SSU_U03.SPECIMEN group
  */
-export const ssuU03SpecimenSchema = z.object({
-  "SPM": segments.spmSchema,
-  "OBX": z.array(segments.obxSchema).optional()
-}).register(hl7v2Metadata, {
-  title: "SSU_U03.SPECIMEN",
-  version: "2.6",
-  description: "HL7 v2.6 SSU_U03.SPECIMEN group",
-  type: "Group"
-});
+export const ssuU03SpecimenSchema = z
+  .object({
+    SPM: segments.spmSchema,
+    OBX: z.array(segments.obxSchema).optional()
+  })
+  .register(hl7v2Metadata, {
+    title: "SSU_U03.SPECIMEN",
+    version: "2.6",
+    description: "HL7 v2.6 SSU_U03.SPECIMEN group",
+    type: "Group"
+  });
 
 /**
  * TypeScript type inferred from the SSU_U03.SPECIMEN schema
@@ -36,16 +38,18 @@ export type SSU_U03_SPECIMEN = z.infer<typeof ssuU03SpecimenSchema>;
  * SSU_U03.SPECIMEN_CONTAINER group schema
  * Defines the structure and validation rules for the SSU_U03.SPECIMEN_CONTAINER group
  */
-export const ssuU03SpecimenContainerSchema = z.object({
-  "SAC": segments.sacSchema,
-  "OBX": z.array(segments.obxSchema).optional(),
-  "SPECIMEN": z.array(ssuU03SpecimenSchema).optional()
-}).register(hl7v2Metadata, {
-  title: "SSU_U03.SPECIMEN_CONTAINER",
-  version: "2.6",
-  description: "HL7 v2.6 SSU_U03.SPECIMEN_CONTAINER group",
-  type: "Group"
-});
+export const ssuU03SpecimenContainerSchema = z
+  .object({
+    SAC: segments.sacSchema,
+    OBX: z.array(segments.obxSchema).optional(),
+    SPECIMEN: z.array(ssuU03SpecimenSchema).optional()
+  })
+  .register(hl7v2Metadata, {
+    title: "SSU_U03.SPECIMEN_CONTAINER",
+    version: "2.6",
+    description: "HL7 v2.6 SSU_U03.SPECIMEN_CONTAINER group",
+    type: "Group"
+  });
 
 /**
  * TypeScript type inferred from the SSU_U03.SPECIMEN_CONTAINER schema
@@ -56,19 +60,21 @@ export type SSU_U03_SPECIMEN_CONTAINER = z.infer<typeof ssuU03SpecimenContainerS
  * SSU_U03 message schema
  * Defines the structure and validation rules for the SSU_U03 message
  */
-export const ssu_u03Schema = z.object({
-  "MSH": segments.mshSchema,
-  "SFT": z.array(segments.sftSchema).optional(),
-  "UAC": segments.uacSchema.optional(),
-  "EQU": segments.equSchema,
-  "SPECIMEN_CONTAINER": z.array(ssuU03SpecimenContainerSchema),
-  "ROL": segments.rolSchema.optional()
-}).register(hl7v2Metadata, {
-  title: "SSU_U03",
-  version: "2.6",
-  description: "HL7 v2.6 SSU_U03 message",
-  type: "Message"
-});
+export const ssu_u03Schema = z
+  .object({
+    MSH: segments.mshSchema,
+    SFT: z.array(segments.sftSchema).optional(),
+    UAC: segments.uacSchema.optional(),
+    EQU: segments.equSchema,
+    SPECIMEN_CONTAINER: z.array(ssuU03SpecimenContainerSchema),
+    ROL: segments.rolSchema.optional()
+  })
+  .register(hl7v2Metadata, {
+    title: "SSU_U03",
+    version: "2.6",
+    description: "HL7 v2.6 SSU_U03 message",
+    type: "Message"
+  });
 
 /**
  * TypeScript type inferred from the SSU_U03 schema

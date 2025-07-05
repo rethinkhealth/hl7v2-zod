@@ -1,13 +1,12 @@
-
-import hl7v2Metadata from '../registry';
-import * as datatypes from '../datatypes';
+import hl7v2Metadata from "../registry";
+import * as datatypes from "../datatypes";
 
 /**
  * HL7 v2.6 BLC Fields
- * 
+ *
  * HL7 v2.6 BLC field definitions
  * Each field consists of specific types and constraints.
- * 
+ *
  * Generated using Zod v4 for improved performance and TypeScript efficiency.
  *
  * Includes HL7v2 metadata registration for enhanced validation and documentation.
@@ -17,26 +16,26 @@ import * as datatypes from '../datatypes';
  * BLC.1 - Blood Product Code
  */
 export const BLC_1 = datatypes.CWE.register(hl7v2Metadata, {
-  "title": "BLC.1",
-  "version": "2.6",
-  "description": "Blood Product Code",
-  "type": "Field",
-  "item": 1528,
-  "table": "HL70426",
-  "longName": "HL7Blood Product Code",
-  "length": 250
+  title: "BLC.1",
+  version: "2.6",
+  description: "Blood Product Code",
+  type: "Field",
+  item: 1528,
+  table: "HL70426",
+  longName: "HL7Blood Product Code",
+  length: 250
 });
 
 /**
  * BLC.2 - Blood Amount
  */
 export const BLC_2 = datatypes.ST.register(hl7v2Metadata, {
-  "title": "BLC.2",
-  "version": "2.6",
-  "description": "Blood Amount",
-  "type": "Field",
-  "item": 1529,
-  "table": "",
-  "longName": "HL7Blood Amount",
-  "length": 267
+  title: "BLC.2",
+  version: "2.6",
+  description: "Blood Amount",
+  type: "Field",
+  item: 1529,
+  table: "",
+  longName: "HL7Blood Amount",
+  length: 267
 });

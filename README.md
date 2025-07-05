@@ -28,7 +28,7 @@ pnpm add @rethinkhealth/hl7v2-zod zod@^3.25.0
 
 ```typescript
 // Import directly from the specific HL7 version you need
-import { ADT_A01 } from '@rethinkhealth/hl7v2-zod/2.8'
+import { adt_a01Schema } from "../dist/2.8";
 
 // Parse and validate an ADT_A01 message
 const hl7Message = {
@@ -40,7 +40,7 @@ const hl7Message = {
 }
 
 try {
-  const result = ADT_A01.parse(hl7Message)
+  const result = adt_a01Schema.parse(hl7Message)
   console.log('Valid HL7 message:', result)
 } catch (error) {
   console.error('Invalid HL7 message:', error)
@@ -49,30 +49,31 @@ try {
 
 ## Usage
 
-Import directly from the specific HL7 version for optimal performance:
+Import directly from the specific HL7:
 
 ```typescript
-// HL7v2.6
-import { ADT_A01, MSH, PID } from '@rethinkhealth/hl7v2-zod/2.6'
+import { adt_a01Schema, segments } from "../dist/2.8";
 
-// HL7v2.8
-import { ADT_A01, MSH, PID } from '@rethinkhealth/hl7v2-zod/2.8'
+const { mshSchema, pidSchema } = segments;
 
-// Access segments and data types
-import { MSH, PID, PV1 } from '@rethinkhealth/hl7v2-zod/2.8'
-import { AD, CE, CX } from '@rethinkhealth/hl7v2-zod/2.8/datatypes'
-```
+adt_a01Schema.parse({
+  MSH: {
+    MSH: {
+      fieldSeparator: "|",
+    },
+  },
+});
 
-### Working with Segments and Fields
+mshSchema.parse({
+  "1": "MSH",
+  "2": "|",
+  // ...   
+});
 
-```typescript
-import { MSH, PID } from '@rethinkhealth/hl7v2-zod/2.8'
-
-// Validate individual segments
-const mshData = MSH.parse({
-  "1": "|",
-  // ... etc
-})
+pidSchema.parse({
+  "1": "PID",
+  // ...
+});
 ```
 
 ## API Reference
@@ -91,11 +92,6 @@ Each version export contains:
 - **Field schemas**: All HL7 field schemas
 - **Data type schemas**: All HL7 data type schemas (e.g., `AD`, `CE`, `CX`)
 - **Metadata**: Registry metadata for the version
-
-## Supported HL7v2 Versions
-
-- **2.6**: HL7v2.6 (2007)
-- **2.8**: HL7v2.8 (2015)
 
 ## Zod v4 Benefits
 
@@ -157,8 +153,7 @@ pnpm test
 
 ```
 src/
-├── 2.6/            # HL7v2.6 schemas
-├── 2.8/            # HL7v2.8 schemas
+├── 2.x/            # HL7v2.x schemas
 └── index.ts        # Main entry point (utility functions)
 ```
 

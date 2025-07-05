@@ -93,20 +93,6 @@ Each version export contains:
 - **Data type schemas**: All HL7 data type schemas (e.g., `AD`, `CE`, `CX`)
 - **Metadata**: Registry metadata for the version
 
-## Zod v4 Benefits
-
-This package is built with [Zod v4](https://zod.dev/v4), which provides:
-
-- **14x faster string parsing**
-- **7x faster array parsing**
-- **6.5x faster object parsing**
-- **100x reduction in TypeScript instantiations**
-- **2x reduction in bundle size**
-- **Improved error customization**
-- **Better discriminated union support**
-
-To learn more, please check [the official documentation](https://zod.dev/v4).
-
 ## Development
 
 ### Prerequisites

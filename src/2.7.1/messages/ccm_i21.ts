@@ -558,7 +558,7 @@ export type CCM_I21_APPOINTMENT_HISTORY = z.infer<typeof ccmI21AppointmentHistor
  * CCM_I21 message schema
  * Defines the structure and validation rules for the CCM_I21 message
  */
-export const ccm_i21Schema = z
+export const ccm_i21Schema: z.ZodTypeAny = z
   .object({
     MSH: segments.mshSchema,
     SFT: z.array(segments.sftSchema).optional(),

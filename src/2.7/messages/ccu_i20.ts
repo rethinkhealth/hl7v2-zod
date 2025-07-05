@@ -600,7 +600,7 @@ export type CCU_I20_APPOINTMENT_HISTORY = z.infer<typeof ccuI20AppointmentHistor
  * CCU_I20 message schema
  * Defines the structure and validation rules for the CCU_I20 message
  */
-export const ccu_i20Schema = z
+export const ccu_i20Schema: z.ZodTypeAny = z
   .object({
     MSH: segments.mshSchema,
     SFT: z.array(segments.sftSchema).optional(),

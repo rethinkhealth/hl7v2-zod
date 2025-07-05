@@ -687,7 +687,7 @@ export type CCR_I16_APPOINTMENT_HISTORY = z.infer<typeof ccrI16AppointmentHistor
  * CCR_I16 message schema
  * Defines the structure and validation rules for the CCR_I16 message
  */
-export const ccr_i16Schema = z
+export const ccr_i16Schema: z.ZodTypeAny = z
   .object({
     MSH: segments.mshSchema,
     SFT: z.array(segments.sftSchema).optional(),

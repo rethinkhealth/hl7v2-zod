@@ -558,7 +558,7 @@ export type CCI_I22_APPOINTMENT_HISTORY = z.infer<typeof cciI22AppointmentHistor
  * CCI_I22 message schema
  * Defines the structure and validation rules for the CCI_I22 message
  */
-export const cci_i22Schema = z
+export const cci_i22Schema: z.ZodTypeAny = z
   .object({
     MSH: segments.mshSchema,
     SFT: z.array(segments.sftSchema).optional(),

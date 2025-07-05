@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 FN Composite Data Type
@@ -85,11 +84,11 @@ export const FN_5 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
  * - FN.5: Surname From Partner/Spouse (ST)
  */
 export const FN = z.object({
-  [`1`]: FN_1,
-  [`2`]: FN_2,
-  [`3`]: FN_3,
-  [`4`]: FN_4,
-  [`5`]: FN_5
+  "1": FN_1,
+  "2": FN_2,
+  "3": FN_3,
+  "4": FN_4,
+  "5": FN_5
 }).register(hl7v2Metadata, {
   title: 'FN',
   version: '2.5',

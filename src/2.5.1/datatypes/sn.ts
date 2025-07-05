@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 SN Composite Data Type
@@ -72,10 +71,10 @@ export const SN_4 = SimpleTypes.NM.max(15).optional().register(hl7v2Metadata, {
  * - SN.4: Num2 (NM)
  */
 export const SN = z.object({
-  [`1`]: SN_1,
-  [`2`]: SN_2,
-  [`3`]: SN_3,
-  [`4`]: SN_4
+  "1": SN_1,
+  "2": SN_2,
+  "3": SN_3,
+  "4": SN_4
 }).register(hl7v2Metadata, {
   title: 'SN',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DIN Composite Data Type
@@ -46,8 +45,8 @@ export const DIN_2 = SimpleTypes.ST.register(hl7v2Metadata, {
  * - DIN.2: Institution Name (CE)
  */
 export const DIN = z.object({
-  [`1`]: DIN_1,
-  [`2`]: DIN_2
+  "1": DIN_1,
+  "2": DIN_2
 }).register(hl7v2Metadata, {
   title: 'DIN',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CCD Composite Data Type
@@ -46,8 +45,8 @@ export const CCD_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - CCD.2: Date/time (TS)
  */
 export const CCD = z.object({
-  [`1`]: CCD_1,
-  [`2`]: CCD_2
+  "1": CCD_1,
+  "2": CCD_2
 }).register(hl7v2Metadata, {
   title: 'CCD',
   version: '2.5',

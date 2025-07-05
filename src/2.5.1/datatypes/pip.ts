@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 PIP Composite Data Type
@@ -85,11 +84,11 @@ export const PIP_5 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - PIP.5: Facility (EI)
  */
 export const PIP = z.object({
-  [`1`]: PIP_1,
-  [`2`]: PIP_2,
-  [`3`]: PIP_3,
-  [`4`]: PIP_4,
-  [`5`]: PIP_5
+  "1": PIP_1,
+  "2": PIP_2,
+  "3": PIP_3,
+  "4": PIP_4,
+  "5": PIP_5
 }).register(hl7v2Metadata, {
   title: 'PIP',
   version: '2.5',

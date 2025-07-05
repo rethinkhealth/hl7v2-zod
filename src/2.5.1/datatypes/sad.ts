@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 SAD Composite Data Type
@@ -59,9 +58,9 @@ export const SAD_3 = SimpleTypes.ST.max(12).optional().register(hl7v2Metadata, {
  * - SAD.3: Dwelling Number (ST)
  */
 export const SAD = z.object({
-  [`1`]: SAD_1,
-  [`2`]: SAD_2,
-  [`3`]: SAD_3
+  "1": SAD_1,
+  "2": SAD_2,
+  "3": SAD_3
 }).register(hl7v2Metadata, {
   title: 'SAD',
   version: '2.5',

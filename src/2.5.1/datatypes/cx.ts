@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CWE } from './cwe';
 
 /**
@@ -151,16 +150,16 @@ export const CX_10 = CWE.optional().register(hl7v2Metadata, {
  * - CX.10: Assigning Agency or Department (CWE)
  */
 export const CX = z.object({
-  [`1`]: CX_1,
-  [`2`]: CX_2,
-  [`3`]: CX_3,
-  [`4`]: CX_4,
-  [`5`]: CX_5,
-  [`6`]: CX_6,
-  [`7`]: CX_7,
-  [`8`]: CX_8,
-  [`9`]: CX_9,
-  [`10`]: CX_10
+  "1": CX_1,
+  "2": CX_2,
+  "3": CX_3,
+  "4": CX_4,
+  "5": CX_5,
+  "6": CX_6,
+  "7": CX_7,
+  "8": CX_8,
+  "9": CX_9,
+  "10": CX_10
 }).register(hl7v2Metadata, {
   title: 'CX',
   version: '2.5',

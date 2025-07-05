@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DR Composite Data Type
@@ -46,8 +45,8 @@ export const DR_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - DR.2: Range End Date/Time (TS)
  */
 export const DR = z.object({
-  [`1`]: DR_1,
-  [`2`]: DR_2
+  "1": DR_1,
+  "2": DR_2
 }).register(hl7v2Metadata, {
   title: 'DR',
   version: '2.5',

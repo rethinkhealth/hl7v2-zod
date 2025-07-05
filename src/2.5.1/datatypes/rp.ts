@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 RP Composite Data Type
@@ -72,10 +71,10 @@ export const RP_4 = SimpleTypes.ID.max(19).optional().register(hl7v2Metadata, {
  * - RP.4: Subtype (ID)
  */
 export const RP = z.object({
-  [`1`]: RP_1,
-  [`2`]: RP_2,
-  [`3`]: RP_3,
-  [`4`]: RP_4
+  "1": RP_1,
+  "2": RP_2,
+  "3": RP_3,
+  "4": RP_4
 }).register(hl7v2Metadata, {
   title: 'RP',
   version: '2.5',

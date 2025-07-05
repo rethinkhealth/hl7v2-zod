@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 QSC Composite Data Type
@@ -72,10 +71,10 @@ export const QSC_4 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
  * - QSC.4: Relational Conjunction (ID)
  */
 export const QSC = z.object({
-  [`1`]: QSC_1,
-  [`2`]: QSC_2,
-  [`3`]: QSC_3,
-  [`4`]: QSC_4
+  "1": QSC_1,
+  "2": QSC_2,
+  "3": QSC_3,
+  "4": QSC_4
 }).register(hl7v2Metadata, {
   title: 'QSC',
   version: '2.5',

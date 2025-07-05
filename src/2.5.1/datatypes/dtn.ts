@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DTN Composite Data Type
@@ -46,8 +45,8 @@ export const DTN_2 = SimpleTypes.NM.max(3).register(hl7v2Metadata, {
  * - DTN.2: Number of Days (NM)
  */
 export const DTN = z.object({
-  [`1`]: DTN_1,
-  [`2`]: DTN_2
+  "1": DTN_1,
+  "2": DTN_2
 }).register(hl7v2Metadata, {
   title: 'DTN',
   version: '2.5',

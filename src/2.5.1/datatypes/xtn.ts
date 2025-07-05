@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 XTN Composite Data Type
@@ -176,18 +175,18 @@ export const XTN_12 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata,
  * - XTN.12: Unformatted Telephone number (ST)
  */
 export const XTN = z.object({
-  [`1`]: XTN_1,
-  [`2`]: XTN_2,
-  [`3`]: XTN_3,
-  [`4`]: XTN_4,
-  [`5`]: XTN_5,
-  [`6`]: XTN_6,
-  [`7`]: XTN_7,
-  [`8`]: XTN_8,
-  [`9`]: XTN_9,
-  [`10`]: XTN_10,
-  [`11`]: XTN_11,
-  [`12`]: XTN_12
+  "1": XTN_1,
+  "2": XTN_2,
+  "3": XTN_3,
+  "4": XTN_4,
+  "5": XTN_5,
+  "6": XTN_6,
+  "7": XTN_7,
+  "8": XTN_8,
+  "9": XTN_9,
+  "10": XTN_10,
+  "11": XTN_11,
+  "12": XTN_12
 }).register(hl7v2Metadata, {
   title: 'XTN',
   version: '2.5',

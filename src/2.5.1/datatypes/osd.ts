@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 OSD Composite Data Type
@@ -163,17 +162,17 @@ export const OSD_11 = SimpleTypes.ID.max(6).optional().register(hl7v2Metadata, {
  * - OSD.11: Filler Order Number: Universal ID Type (ID)
  */
 export const OSD = z.object({
-  [`1`]: OSD_1,
-  [`2`]: OSD_2,
-  [`3`]: OSD_3,
-  [`4`]: OSD_4,
-  [`5`]: OSD_5,
-  [`6`]: OSD_6,
-  [`7`]: OSD_7,
-  [`8`]: OSD_8,
-  [`9`]: OSD_9,
-  [`10`]: OSD_10,
-  [`11`]: OSD_11
+  "1": OSD_1,
+  "2": OSD_2,
+  "3": OSD_3,
+  "4": OSD_4,
+  "5": OSD_5,
+  "6": OSD_6,
+  "7": OSD_7,
+  "8": OSD_8,
+  "9": OSD_9,
+  "10": OSD_10,
+  "11": OSD_11
 }).register(hl7v2Metadata, {
   title: 'OSD',
   version: '2.5',

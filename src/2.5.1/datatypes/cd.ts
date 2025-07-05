@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { WVI } from './wvi';
 import { WVS } from './wvs';
 import { CSU } from './csu';
@@ -102,12 +101,12 @@ export const CD_6 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - CD.6: Minimum/Maximum Data Values (NR)
  */
 export const CD = z.object({
-  [`1`]: CD_1,
-  [`2`]: CD_2,
-  [`3`]: CD_3,
-  [`4`]: CD_4,
-  [`5`]: CD_5,
-  [`6`]: CD_6
+  "1": CD_1,
+  "2": CD_2,
+  "3": CD_3,
+  "4": CD_4,
+  "5": CD_5,
+  "6": CD_6
 }).register(hl7v2Metadata, {
   title: 'CD',
   version: '2.5',

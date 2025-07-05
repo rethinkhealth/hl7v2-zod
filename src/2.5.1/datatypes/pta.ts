@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { MOP } from './mop';
 
 /**
@@ -73,10 +72,10 @@ export const PTA_4 = MOP.register(hl7v2Metadata, {
  * - PTA.4: Money or Percentage (MOP)
  */
 export const PTA = z.object({
-  [`1`]: PTA_1,
-  [`2`]: PTA_2,
-  [`3`]: PTA_3,
-  [`4`]: PTA_4
+  "1": PTA_1,
+  "2": PTA_2,
+  "3": PTA_3,
+  "4": PTA_4
 }).register(hl7v2Metadata, {
   title: 'PTA',
   version: '2.5',

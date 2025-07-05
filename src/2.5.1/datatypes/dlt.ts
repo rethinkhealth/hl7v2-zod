@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DLT Composite Data Type
@@ -72,10 +71,10 @@ export const DLT_4 = SimpleTypes.NM.max(4).optional().register(hl7v2Metadata, {
  * - DLT.4: Days Retained (NM)
  */
 export const DLT = z.object({
-  [`1`]: DLT_1,
-  [`2`]: DLT_2,
-  [`3`]: DLT_3,
-  [`4`]: DLT_4
+  "1": DLT_1,
+  "2": DLT_2,
+  "3": DLT_3,
+  "4": DLT_4
 }).register(hl7v2Metadata, {
   title: 'DLT',
   version: '2.5',

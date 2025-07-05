@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CQ Composite Data Type
@@ -46,8 +45,8 @@ export const CQ_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - CQ.2: Units (CE)
  */
 export const CQ = z.object({
-  [`1`]: CQ_1,
-  [`2`]: CQ_2
+  "1": CQ_1,
+  "2": CQ_2
 }).register(hl7v2Metadata, {
   title: 'CQ',
   version: '2.5',

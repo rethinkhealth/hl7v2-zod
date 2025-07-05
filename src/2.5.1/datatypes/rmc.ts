@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { MOP } from './mop';
 
 /**
@@ -73,10 +72,10 @@ export const RMC_4 = MOP.register(hl7v2Metadata, {
  * - RMC.4: Money or Percentage (MOP)
  */
 export const RMC = z.object({
-  [`1`]: RMC_1,
-  [`2`]: RMC_2,
-  [`3`]: RMC_3,
-  [`4`]: RMC_4
+  "1": RMC_1,
+  "2": RMC_2,
+  "3": RMC_3,
+  "4": RMC_4
 }).register(hl7v2Metadata, {
   title: 'RMC',
   version: '2.5',

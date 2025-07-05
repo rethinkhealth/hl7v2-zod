@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CWE } from './cwe';
 
 /**
@@ -164,17 +163,17 @@ export const RPT_11 = SimpleTypes.GTS.max(200).optional().register(hl7v2Metadata
  * - RPT.11: General Timing Specification (GTS)
  */
 export const RPT = z.object({
-  [`1`]: RPT_1,
-  [`2`]: RPT_2,
-  [`3`]: RPT_3,
-  [`4`]: RPT_4,
-  [`5`]: RPT_5,
-  [`6`]: RPT_6,
-  [`7`]: RPT_7,
-  [`8`]: RPT_8,
-  [`9`]: RPT_9,
-  [`10`]: RPT_10,
-  [`11`]: RPT_11
+  "1": RPT_1,
+  "2": RPT_2,
+  "3": RPT_3,
+  "4": RPT_4,
+  "5": RPT_5,
+  "6": RPT_6,
+  "7": RPT_7,
+  "8": RPT_8,
+  "9": RPT_9,
+  "10": RPT_10,
+  "11": RPT_11
 }).register(hl7v2Metadata, {
   title: 'RPT',
   version: '2.5',

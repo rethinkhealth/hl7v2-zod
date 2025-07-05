@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 MSG Composite Data Type
@@ -59,9 +58,9 @@ export const MSG_3 = SimpleTypes.ID.max(7).register(hl7v2Metadata, {
  * - MSG.3: Message Structure (ID)
  */
 export const MSG = z.object({
-  [`1`]: MSG_1,
-  [`2`]: MSG_2,
-  [`3`]: MSG_3
+  "1": MSG_1,
+  "2": MSG_2,
+  "3": MSG_3
 }).register(hl7v2Metadata, {
   title: 'MSG',
   version: '2.5',

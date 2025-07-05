@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CNE Composite Data Type
@@ -137,15 +136,15 @@ export const CNE_9 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata, 
  * - CNE.9: Original Text (ST)
  */
 export const CNE = z.object({
-  [`1`]: CNE_1,
-  [`2`]: CNE_2,
-  [`3`]: CNE_3,
-  [`4`]: CNE_4,
-  [`5`]: CNE_5,
-  [`6`]: CNE_6,
-  [`7`]: CNE_7,
-  [`8`]: CNE_8,
-  [`9`]: CNE_9
+  "1": CNE_1,
+  "2": CNE_2,
+  "3": CNE_3,
+  "4": CNE_4,
+  "5": CNE_5,
+  "6": CNE_6,
+  "7": CNE_7,
+  "8": CNE_8,
+  "9": CNE_9
 }).register(hl7v2Metadata, {
   title: 'CNE',
   version: '2.5',

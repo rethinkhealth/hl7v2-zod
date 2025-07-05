@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CNE } from './cne';
 
 /**
@@ -60,9 +59,9 @@ export const OSP_3 = SimpleTypes.DT.max(8).optional().register(hl7v2Metadata, {
  * - OSP.3: Occurrence Span Stop Date (DT)
  */
 export const OSP = z.object({
-  [`1`]: OSP_1,
-  [`2`]: OSP_2,
-  [`3`]: OSP_3
+  "1": OSP_1,
+  "2": OSP_2,
+  "3": OSP_3
 }).register(hl7v2Metadata, {
   title: 'OSP',
   version: '2.5',

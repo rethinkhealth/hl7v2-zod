@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 ICD Composite Data Type
@@ -59,9 +58,9 @@ export const ICD_3 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - ICD.3: Date/Time Certification Required (TS)
  */
 export const ICD = z.object({
-  [`1`]: ICD_1,
-  [`2`]: ICD_2,
-  [`3`]: ICD_3
+  "1": ICD_1,
+  "2": ICD_2,
+  "3": ICD_3
 }).register(hl7v2Metadata, {
   title: 'ICD',
   version: '2.5',

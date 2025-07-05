@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 MO Composite Data Type
@@ -46,8 +45,8 @@ export const MO_2 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
  * - MO.2: Denomination (ID)
  */
 export const MO = z.object({
-  [`1`]: MO_1,
-  [`2`]: MO_2
+  "1": MO_1,
+  "2": MO_2
 }).register(hl7v2Metadata, {
   title: 'MO',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 AD Composite Data Type
@@ -124,14 +123,14 @@ export const AD_8 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, {
  * - AD.8: Other Geographic Designation (ST)
  */
 export const AD = z.object({
-  [`1`]: AD_1,
-  [`2`]: AD_2,
-  [`3`]: AD_3,
-  [`4`]: AD_4,
-  [`5`]: AD_5,
-  [`6`]: AD_6,
-  [`7`]: AD_7,
-  [`8`]: AD_8
+  "1": AD_1,
+  "2": AD_2,
+  "3": AD_3,
+  "4": AD_4,
+  "5": AD_5,
+  "6": AD_6,
+  "7": AD_7,
+  "8": AD_8
 }).register(hl7v2Metadata, {
   title: 'AD',
   version: '2.5',

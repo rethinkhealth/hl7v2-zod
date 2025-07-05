@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 PT Composite Data Type
@@ -46,8 +45,8 @@ export const PT_2 = SimpleTypes.ID.max(1).optional().register(hl7v2Metadata, {
  * - PT.2: Processing Mode (ID)
  */
 export const PT = z.object({
-  [`1`]: PT_1,
-  [`2`]: PT_2
+  "1": PT_1,
+  "2": PT_2
 }).register(hl7v2Metadata, {
   title: 'PT',
   version: '2.5',

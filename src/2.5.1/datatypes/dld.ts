@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DLD Composite Data Type
@@ -46,8 +45,8 @@ export const DLD_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - DLD.2: Effective Date (TS)
  */
 export const DLD = z.object({
-  [`1`]: DLD_1,
-  [`2`]: DLD_2
+  "1": DLD_1,
+  "2": DLD_2
 }).register(hl7v2Metadata, {
   title: 'DLD',
   version: '2.5',

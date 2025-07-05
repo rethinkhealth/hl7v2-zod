@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 PL Composite Data Type
@@ -163,17 +162,17 @@ export const PL_11 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - PL.11: Assigning Authority for Location (HD)
  */
 export const PL = z.object({
-  [`1`]: PL_1,
-  [`2`]: PL_2,
-  [`3`]: PL_3,
-  [`4`]: PL_4,
-  [`5`]: PL_5,
-  [`6`]: PL_6,
-  [`7`]: PL_7,
-  [`8`]: PL_8,
-  [`9`]: PL_9,
-  [`10`]: PL_10,
-  [`11`]: PL_11
+  "1": PL_1,
+  "2": PL_2,
+  "3": PL_3,
+  "4": PL_4,
+  "5": PL_5,
+  "6": PL_6,
+  "7": PL_7,
+  "8": PL_8,
+  "9": PL_9,
+  "10": PL_10,
+  "11": PL_11
 }).register(hl7v2Metadata, {
   title: 'PL',
   version: '2.5',

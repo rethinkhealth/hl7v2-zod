@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CCP Composite Data Type
@@ -59,9 +58,9 @@ export const CCP_3 = SimpleTypes.NM.max(6).optional().register(hl7v2Metadata, {
  * - CCP.3: Channel Calibration Time Skew (NM)
  */
 export const CCP = z.object({
-  [`1`]: CCP_1,
-  [`2`]: CCP_2,
-  [`3`]: CCP_3
+  "1": CCP_1,
+  "2": CCP_2,
+  "3": CCP_3
 }).register(hl7v2Metadata, {
   title: 'CCP',
   version: '2.5',

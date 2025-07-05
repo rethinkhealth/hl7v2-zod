@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 NR Composite Data Type
@@ -46,8 +45,8 @@ export const NR_2 = SimpleTypes.NM.max(16).optional().register(hl7v2Metadata, {
  * - NR.2: High Value (NM)
  */
 export const NR = z.object({
-  [`1`]: NR_1,
-  [`2`]: NR_2
+  "1": NR_1,
+  "2": NR_2
 }).register(hl7v2Metadata, {
   title: 'NR',
   version: '2.5',

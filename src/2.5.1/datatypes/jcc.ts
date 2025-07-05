@@ -59,9 +59,9 @@ export const JCC_3 = MixedTypes.TX.optional().register(hl7v2Metadata, {
  * - JCC.3: Job Description Text (TX)
  */
 export const JCC = z.object({
-  [`1`]: JCC_1,
-  [`2`]: JCC_2,
-  [`3`]: JCC_3
+  "1": JCC_1,
+  "2": JCC_2,
+  "3": JCC_3
 }).register(hl7v2Metadata, {
   title: 'JCC',
   version: '2.5',

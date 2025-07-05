@@ -59,9 +59,9 @@ export const PRL_3 = MixedTypes.TX.optional().register(hl7v2Metadata, {
  * - PRL.3: Parent Observation Value Descriptor (TX)
  */
 export const PRL = z.object({
-  [`1`]: PRL_1,
-  [`2`]: PRL_2,
-  [`3`]: PRL_3
+  "1": PRL_1,
+  "2": PRL_2,
+  "3": PRL_3
 }).register(hl7v2Metadata, {
   title: 'PRL',
   version: '2.5',

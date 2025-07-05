@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 MA Composite Data Type
@@ -98,12 +97,12 @@ export const MA_6 = SimpleTypes.NM.max(16).optional().register(hl7v2Metadata, {
  * - MA.6: Sample N From Channel N (NM)
  */
 export const MA = z.object({
-  [`1`]: MA_1,
-  [`2`]: MA_2,
-  [`3`]: MA_3,
-  [`4`]: MA_4,
-  [`5`]: MA_5,
-  [`6`]: MA_6
+  "1": MA_1,
+  "2": MA_2,
+  "3": MA_3,
+  "4": MA_4,
+  "5": MA_5,
+  "6": MA_6
 }).register(hl7v2Metadata, {
   title: 'MA',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 VH Composite Data Type
@@ -72,10 +71,10 @@ export const VH_4 = SimpleTypes.TM.max(16).optional().register(hl7v2Metadata, {
  * - VH.4: End Hour Range (TM)
  */
 export const VH = z.object({
-  [`1`]: VH_1,
-  [`2`]: VH_2,
-  [`3`]: VH_3,
-  [`4`]: VH_4
+  "1": VH_1,
+  "2": VH_2,
+  "3": VH_3,
+  "4": VH_4
 }).register(hl7v2Metadata, {
   title: 'VH',
   version: '2.5',

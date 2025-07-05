@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 RCD Composite Data Type
@@ -59,9 +58,9 @@ export const RCD_3 = SimpleTypes.NM.max(2).optional().register(hl7v2Metadata, {
  * - RCD.3: Maximum Column Width (NM)
  */
 export const RCD = z.object({
-  [`1`]: RCD_1,
-  [`2`]: RCD_2,
-  [`3`]: RCD_3
+  "1": RCD_1,
+  "2": RCD_2,
+  "3": RCD_3
 }).register(hl7v2Metadata, {
   title: 'RCD',
   version: '2.5',

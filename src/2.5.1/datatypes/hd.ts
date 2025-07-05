@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 HD Composite Data Type
@@ -59,9 +58,9 @@ export const HD_3 = SimpleTypes.ID.max(6).optional().register(hl7v2Metadata, {
  * - HD.3: Universal ID Type (ID)
  */
 export const HD = z.object({
-  [`1`]: HD_1,
-  [`2`]: HD_2,
-  [`3`]: HD_3
+  "1": HD_1,
+  "2": HD_2,
+  "3": HD_3
 }).register(hl7v2Metadata, {
   title: 'HD',
   version: '2.5',

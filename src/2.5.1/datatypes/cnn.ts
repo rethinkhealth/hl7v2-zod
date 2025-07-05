@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CNN Composite Data Type
@@ -163,17 +162,17 @@ export const CNN_11 = SimpleTypes.ID.max(6).optional().register(hl7v2Metadata, {
  * - CNN.11: Assigning Authority  - Universal ID Type (ID)
  */
 export const CNN = z.object({
-  [`1`]: CNN_1,
-  [`2`]: CNN_2,
-  [`3`]: CNN_3,
-  [`4`]: CNN_4,
-  [`5`]: CNN_5,
-  [`6`]: CNN_6,
-  [`7`]: CNN_7,
-  [`8`]: CNN_8,
-  [`9`]: CNN_9,
-  [`10`]: CNN_10,
-  [`11`]: CNN_11
+  "1": CNN_1,
+  "2": CNN_2,
+  "3": CNN_3,
+  "4": CNN_4,
+  "5": CNN_5,
+  "6": CNN_6,
+  "7": CNN_7,
+  "8": CNN_8,
+  "9": CNN_9,
+  "10": CNN_10,
+  "11": CNN_11
 }).register(hl7v2Metadata, {
   title: 'CNN',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 NA Composite Data Type
@@ -72,10 +71,10 @@ export const NA_4 = SimpleTypes.NM.max(16).optional().register(hl7v2Metadata, {
  * - NA.4: Value4 (NM)
  */
 export const NA = z.object({
-  [`1`]: NA_1,
-  [`2`]: NA_2,
-  [`3`]: NA_3,
-  [`4`]: NA_4
+  "1": NA_1,
+  "2": NA_2,
+  "3": NA_3,
+  "4": NA_4
 }).register(hl7v2Metadata, {
   title: 'NA',
   version: '2.5',

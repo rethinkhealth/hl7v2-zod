@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CNE } from './cne';
 
 /**
@@ -47,8 +46,8 @@ export const OCD_2 = SimpleTypes.DT.max(8).register(hl7v2Metadata, {
  * - OCD.2: Occurrence Date (DT)
  */
 export const OCD = z.object({
-  [`1`]: OCD_1,
-  [`2`]: OCD_2
+  "1": OCD_1,
+  "2": OCD_2
 }).register(hl7v2Metadata, {
   title: 'OCD',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 VID Composite Data Type
@@ -59,9 +58,9 @@ export const VID_3 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - VID.3: International Version ID (CE)
  */
 export const VID = z.object({
-  [`1`]: VID_1,
-  [`2`]: VID_2,
-  [`3`]: VID_3
+  "1": VID_1,
+  "2": VID_2,
+  "3": VID_3
 }).register(hl7v2Metadata, {
   title: 'VID',
   version: '2.5',

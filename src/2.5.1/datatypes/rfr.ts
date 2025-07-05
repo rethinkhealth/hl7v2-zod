@@ -111,13 +111,13 @@ export const RFR_7 = MixedTypes.TX.optional().register(hl7v2Metadata, {
  * - RFR.7: Conditions (TX)
  */
 export const RFR = z.object({
-  [`1`]: RFR_1,
-  [`2`]: RFR_2,
-  [`3`]: RFR_3,
-  [`4`]: RFR_4,
-  [`5`]: RFR_5,
-  [`6`]: RFR_6,
-  [`7`]: RFR_7
+  "1": RFR_1,
+  "2": RFR_2,
+  "3": RFR_3,
+  "4": RFR_4,
+  "5": RFR_5,
+  "6": RFR_6,
+  "7": RFR_7
 }).register(hl7v2Metadata, {
   title: 'RFR',
   version: '2.5',

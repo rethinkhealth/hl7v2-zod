@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CP Composite Data Type
@@ -98,12 +97,12 @@ export const CP_6 = SimpleTypes.ID.max(1).optional().register(hl7v2Metadata, {
  * - CP.6: Range Type (ID)
  */
 export const CP = z.object({
-  [`1`]: CP_1,
-  [`2`]: CP_2,
-  [`3`]: CP_3,
-  [`4`]: CP_4,
-  [`5`]: CP_5,
-  [`6`]: CP_6
+  "1": CP_1,
+  "2": CP_2,
+  "3": CP_3,
+  "4": CP_4,
+  "5": CP_5,
+  "6": CP_6
 }).register(hl7v2Metadata, {
   title: 'CP',
   version: '2.5',

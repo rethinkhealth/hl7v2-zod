@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 ELD Composite Data Type
@@ -72,10 +71,10 @@ export const ELD_4 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - ELD.4: Code Identifying Error (CE)
  */
 export const ELD = z.object({
-  [`1`]: ELD_1,
-  [`2`]: ELD_2,
-  [`3`]: ELD_3,
-  [`4`]: ELD_4
+  "1": ELD_1,
+  "2": ELD_2,
+  "3": ELD_3,
+  "4": ELD_4
 }).register(hl7v2Metadata, {
   title: 'ELD',
   version: '2.5',

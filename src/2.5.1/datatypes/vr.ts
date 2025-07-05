@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 VR Composite Data Type
@@ -46,8 +45,8 @@ export const VR_2 = SimpleTypes.ST.max(6).optional().register(hl7v2Metadata, {
  * - VR.2: Last Data Code Value (ST)
  */
 export const VR = z.object({
-  [`1`]: VR_1,
-  [`2`]: VR_2
+  "1": VR_1,
+  "2": VR_2
 }).register(hl7v2Metadata, {
   title: 'VR',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 PLN Composite Data Type
@@ -72,10 +71,10 @@ export const PLN_4 = SimpleTypes.DT.max(8).optional().register(hl7v2Metadata, {
  * - PLN.4: Expiration Date (DT)
  */
 export const PLN = z.object({
-  [`1`]: PLN_1,
-  [`2`]: PLN_2,
-  [`3`]: PLN_3,
-  [`4`]: PLN_4
+  "1": PLN_1,
+  "2": PLN_2,
+  "3": PLN_3,
+  "4": PLN_4
 }).register(hl7v2Metadata, {
   title: 'PLN',
   version: '2.5',

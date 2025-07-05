@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { SAD } from './sad';
 
 /**
@@ -203,20 +202,20 @@ export const XAD_14 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - XAD.14: Expiration Date (TS)
  */
 export const XAD = z.object({
-  [`1`]: XAD_1,
-  [`2`]: XAD_2,
-  [`3`]: XAD_3,
-  [`4`]: XAD_4,
-  [`5`]: XAD_5,
-  [`6`]: XAD_6,
-  [`7`]: XAD_7,
-  [`8`]: XAD_8,
-  [`9`]: XAD_9,
-  [`10`]: XAD_10,
-  [`11`]: XAD_11,
-  [`12`]: XAD_12,
-  [`13`]: XAD_13,
-  [`14`]: XAD_14
+  "1": XAD_1,
+  "2": XAD_2,
+  "3": XAD_3,
+  "4": XAD_4,
+  "5": XAD_5,
+  "6": XAD_6,
+  "7": XAD_7,
+  "8": XAD_8,
+  "9": XAD_9,
+  "10": XAD_10,
+  "11": XAD_11,
+  "12": XAD_12,
+  "13": XAD_13,
+  "14": XAD_14
 }).register(hl7v2Metadata, {
   title: 'XAD',
   version: '2.5',

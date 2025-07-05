@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 AUI Composite Data Type
@@ -59,9 +58,9 @@ export const AUI_3 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata, 
  * - AUI.3: Source (ST)
  */
 export const AUI = z.object({
-  [`1`]: AUI_1,
-  [`2`]: AUI_2,
-  [`3`]: AUI_3
+  "1": AUI_1,
+  "2": AUI_2,
+  "3": AUI_3
 }).register(hl7v2Metadata, {
   title: 'AUI',
   version: '2.5',

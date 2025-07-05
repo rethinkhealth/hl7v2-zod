@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 MOC Composite Data Type
@@ -46,8 +45,8 @@ export const MOC_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - MOC.2: Charge Code (CE)
  */
 export const MOC = z.object({
-  [`1`]: MOC_1,
-  [`2`]: MOC_2
+  "1": MOC_1,
+  "2": MOC_2
 }).register(hl7v2Metadata, {
   title: 'MOC',
   version: '2.5',

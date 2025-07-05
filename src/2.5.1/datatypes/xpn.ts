@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 XPN Composite Data Type
@@ -202,20 +201,20 @@ export const XPN_14 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata,
  * - XPN.14: Professional Suffix (ST)
  */
 export const XPN = z.object({
-  [`1`]: XPN_1,
-  [`2`]: XPN_2,
-  [`3`]: XPN_3,
-  [`4`]: XPN_4,
-  [`5`]: XPN_5,
-  [`6`]: XPN_6,
-  [`7`]: XPN_7,
-  [`8`]: XPN_8,
-  [`9`]: XPN_9,
-  [`10`]: XPN_10,
-  [`11`]: XPN_11,
-  [`12`]: XPN_12,
-  [`13`]: XPN_13,
-  [`14`]: XPN_14
+  "1": XPN_1,
+  "2": XPN_2,
+  "3": XPN_3,
+  "4": XPN_4,
+  "5": XPN_5,
+  "6": XPN_6,
+  "7": XPN_7,
+  "8": XPN_8,
+  "9": XPN_9,
+  "10": XPN_10,
+  "11": XPN_11,
+  "12": XPN_12,
+  "13": XPN_13,
+  "14": XPN_14
 }).register(hl7v2Metadata, {
   title: 'XPN',
   version: '2.5',

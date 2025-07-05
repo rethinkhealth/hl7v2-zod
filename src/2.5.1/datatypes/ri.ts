@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 RI Composite Data Type
@@ -46,8 +45,8 @@ export const RI_2 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata, {
  * - RI.2: Explicit Time Interval (ST)
  */
 export const RI = z.object({
-  [`1`]: RI_1,
-  [`2`]: RI_2
+  "1": RI_1,
+  "2": RI_2
 }).register(hl7v2Metadata, {
   title: 'RI',
   version: '2.5',

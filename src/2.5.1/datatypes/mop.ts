@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 MOP Composite Data Type
@@ -59,9 +58,9 @@ export const MOP_3 = SimpleTypes.ID.max(3).optional().register(hl7v2Metadata, {
  * - MOP.3: Currency Denomination (ID)
  */
 export const MOP = z.object({
-  [`1`]: MOP_1,
-  [`2`]: MOP_2,
-  [`3`]: MOP_3
+  "1": MOP_1,
+  "2": MOP_2,
+  "3": MOP_3
 }).register(hl7v2Metadata, {
   title: 'MOP',
   version: '2.5',

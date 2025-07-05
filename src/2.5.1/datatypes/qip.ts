@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 QIP Composite Data Type
@@ -46,8 +45,8 @@ export const QIP_2 = SimpleTypes.ST.max(199).register(hl7v2Metadata, {
  * - QIP.2: Values (ST)
  */
 export const QIP = z.object({
-  [`1`]: QIP_1,
-  [`2`]: QIP_2
+  "1": QIP_1,
+  "2": QIP_2
 }).register(hl7v2Metadata, {
   title: 'QIP',
   version: '2.5',

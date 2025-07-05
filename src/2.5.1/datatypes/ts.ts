@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 TS Composite Data Type
@@ -46,8 +45,8 @@ export const TS_2 = SimpleTypes.ID.max(1).optional().register(hl7v2Metadata, {
  * - TS.2: Degree of Precision (ID)
  */
 export const TS = z.object({
-  [`1`]: TS_1,
-  [`2`]: TS_2
+  "1": TS_1,
+  "2": TS_2
 }).register(hl7v2Metadata, {
   title: 'TS',
   version: '2.5',

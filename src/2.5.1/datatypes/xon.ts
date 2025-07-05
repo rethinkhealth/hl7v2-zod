@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 XON Composite Data Type
@@ -150,16 +149,16 @@ export const XON_10 = SimpleTypes.ST.max(20).optional().register(hl7v2Metadata, 
  * - XON.10: Organization Identifier (ST)
  */
 export const XON = z.object({
-  [`1`]: XON_1,
-  [`2`]: XON_2,
-  [`3`]: XON_3,
-  [`4`]: XON_4,
-  [`5`]: XON_5,
-  [`6`]: XON_6,
-  [`7`]: XON_7,
-  [`8`]: XON_8,
-  [`9`]: XON_9,
-  [`10`]: XON_10
+  "1": XON_1,
+  "2": XON_2,
+  "3": XON_3,
+  "4": XON_4,
+  "5": XON_5,
+  "6": XON_6,
+  "7": XON_7,
+  "8": XON_8,
+  "9": XON_9,
+  "10": XON_10
 }).register(hl7v2Metadata, {
   title: 'XON',
   version: '2.5',

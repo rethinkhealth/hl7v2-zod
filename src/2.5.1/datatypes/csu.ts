@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CSU Composite Data Type
@@ -111,13 +110,13 @@ export const CSU_7 = SimpleTypes.ID.max(20).optional().register(hl7v2Metadata, {
  * - CSU.7: Alternate Unit of Measure Coding System (ID)
  */
 export const CSU = z.object({
-  [`1`]: CSU_1,
-  [`2`]: CSU_2,
-  [`3`]: CSU_3,
-  [`4`]: CSU_4,
-  [`5`]: CSU_5,
-  [`6`]: CSU_6,
-  [`7`]: CSU_7
+  "1": CSU_1,
+  "2": CSU_2,
+  "3": CSU_3,
+  "4": CSU_4,
+  "5": CSU_5,
+  "6": CSU_6,
+  "7": CSU_7
 }).register(hl7v2Metadata, {
   title: 'CSU',
   version: '2.5',

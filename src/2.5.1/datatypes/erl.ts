@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 ERL Composite Data Type
@@ -98,12 +97,12 @@ export const ERL_6 = SimpleTypes.NM.max(2).optional().register(hl7v2Metadata, {
  * - ERL.6: Sub-Component Number (NM)
  */
 export const ERL = z.object({
-  [`1`]: ERL_1,
-  [`2`]: ERL_2,
-  [`3`]: ERL_3,
-  [`4`]: ERL_4,
-  [`5`]: ERL_5,
-  [`6`]: ERL_6
+  "1": ERL_1,
+  "2": ERL_2,
+  "3": ERL_3,
+  "4": ERL_4,
+  "5": ERL_5,
+  "6": ERL_6
 }).register(hl7v2Metadata, {
   title: 'ERL',
   version: '2.5',

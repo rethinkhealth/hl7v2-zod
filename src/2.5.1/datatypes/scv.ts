@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CWE } from './cwe';
 
 /**
@@ -47,8 +46,8 @@ export const SCV_2 = SimpleTypes.ST.max(20).optional().register(hl7v2Metadata, {
  * - SCV.2: Parameter Value (ST)
  */
 export const SCV = z.object({
-  [`1`]: SCV_1,
-  [`2`]: SCV_2
+  "1": SCV_1,
+  "2": SCV_2
 }).register(hl7v2Metadata, {
   title: 'SCV',
   version: '2.5',

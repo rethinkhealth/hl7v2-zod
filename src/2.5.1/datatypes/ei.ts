@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 EI Composite Data Type
@@ -72,10 +71,10 @@ export const EI_4 = SimpleTypes.ID.max(6).optional().register(hl7v2Metadata, {
  * - EI.4: Universal ID Type (ID)
  */
 export const EI = z.object({
-  [`1`]: EI_1,
-  [`2`]: EI_2,
-  [`3`]: EI_3,
-  [`4`]: EI_4
+  "1": EI_1,
+  "2": EI_2,
+  "3": EI_3,
+  "4": EI_4
 }).register(hl7v2Metadata, {
   title: 'EI',
   version: '2.5',

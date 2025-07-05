@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CWE Composite Data Type
@@ -137,15 +136,15 @@ export const CWE_9 = SimpleTypes.ST.max(199).optional().register(hl7v2Metadata, 
  * - CWE.9: Original Text (ST)
  */
 export const CWE = z.object({
-  [`1`]: CWE_1,
-  [`2`]: CWE_2,
-  [`3`]: CWE_3,
-  [`4`]: CWE_4,
-  [`5`]: CWE_5,
-  [`6`]: CWE_6,
-  [`7`]: CWE_7,
-  [`8`]: CWE_8,
-  [`9`]: CWE_9
+  "1": CWE_1,
+  "2": CWE_2,
+  "3": CWE_3,
+  "4": CWE_4,
+  "5": CWE_5,
+  "6": CWE_6,
+  "7": CWE_7,
+  "8": CWE_8,
+  "9": CWE_9
 }).register(hl7v2Metadata, {
   title: 'CWE',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 LA1 Composite Data Type
@@ -137,15 +136,15 @@ export const LA1_9 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - LA1.9: Address (AD)
  */
 export const LA1 = z.object({
-  [`1`]: LA1_1,
-  [`2`]: LA1_2,
-  [`3`]: LA1_3,
-  [`4`]: LA1_4,
-  [`5`]: LA1_5,
-  [`6`]: LA1_6,
-  [`7`]: LA1_7,
-  [`8`]: LA1_8,
-  [`9`]: LA1_9
+  "1": LA1_1,
+  "2": LA1_2,
+  "3": LA1_3,
+  "4": LA1_4,
+  "5": LA1_5,
+  "6": LA1_6,
+  "7": LA1_7,
+  "8": LA1_8,
+  "9": LA1_9
 }).register(hl7v2Metadata, {
   title: 'LA1',
   version: '2.5',

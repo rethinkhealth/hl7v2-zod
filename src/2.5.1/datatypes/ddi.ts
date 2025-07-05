@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DDI Composite Data Type
@@ -59,9 +58,9 @@ export const DDI_3 = SimpleTypes.NM.max(4).optional().register(hl7v2Metadata, {
  * - DDI.3: Number of Days (NM)
  */
 export const DDI = z.object({
-  [`1`]: DDI_1,
-  [`2`]: DDI_2,
-  [`3`]: DDI_3
+  "1": DDI_1,
+  "2": DDI_2,
+  "3": DDI_3
 }).register(hl7v2Metadata, {
   title: 'DDI',
   version: '2.5',

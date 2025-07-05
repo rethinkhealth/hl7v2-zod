@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CWE } from './cwe';
 
 /**
@@ -333,30 +332,30 @@ export const PPN_24 = CWE.optional().register(hl7v2Metadata, {
  * - PPN.24: Assigning Agency or Department (CWE)
  */
 export const PPN = z.object({
-  [`1`]: PPN_1,
-  [`2`]: PPN_2,
-  [`3`]: PPN_3,
-  [`4`]: PPN_4,
-  [`5`]: PPN_5,
-  [`6`]: PPN_6,
-  [`7`]: PPN_7,
-  [`8`]: PPN_8,
-  [`9`]: PPN_9,
-  [`10`]: PPN_10,
-  [`11`]: PPN_11,
-  [`12`]: PPN_12,
-  [`13`]: PPN_13,
-  [`14`]: PPN_14,
-  [`15`]: PPN_15,
-  [`16`]: PPN_16,
-  [`17`]: PPN_17,
-  [`18`]: PPN_18,
-  [`19`]: PPN_19,
-  [`20`]: PPN_20,
-  [`21`]: PPN_21,
-  [`22`]: PPN_22,
-  [`23`]: PPN_23,
-  [`24`]: PPN_24
+  "1": PPN_1,
+  "2": PPN_2,
+  "3": PPN_3,
+  "4": PPN_4,
+  "5": PPN_5,
+  "6": PPN_6,
+  "7": PPN_7,
+  "8": PPN_8,
+  "9": PPN_9,
+  "10": PPN_10,
+  "11": PPN_11,
+  "12": PPN_12,
+  "13": PPN_13,
+  "14": PPN_14,
+  "15": PPN_15,
+  "16": PPN_16,
+  "17": PPN_17,
+  "18": PPN_18,
+  "19": PPN_19,
+  "20": PPN_20,
+  "21": PPN_21,
+  "22": PPN_22,
+  "23": PPN_23,
+  "24": PPN_24
 }).register(hl7v2Metadata, {
   title: 'PPN',
   version: '2.5',

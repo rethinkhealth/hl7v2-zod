@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 FC Composite Data Type
@@ -46,8 +45,8 @@ export const FC_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - FC.2: Effective Date (TS)
  */
 export const FC = z.object({
-  [`1`]: FC_1,
-  [`2`]: FC_2
+  "1": FC_1,
+  "2": FC_2
 }).register(hl7v2Metadata, {
   title: 'FC',
   version: '2.5',

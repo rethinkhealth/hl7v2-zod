@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 DLN Composite Data Type
@@ -59,9 +58,9 @@ export const DLN_3 = SimpleTypes.DT.max(24).optional().register(hl7v2Metadata, {
  * - DLN.3: Expiration Date (DT)
  */
 export const DLN = z.object({
-  [`1`]: DLN_1,
-  [`2`]: DLN_2,
-  [`3`]: DLN_3
+  "1": DLN_1,
+  "2": DLN_2,
+  "3": DLN_3
 }).register(hl7v2Metadata, {
   title: 'DLN',
   version: '2.5',

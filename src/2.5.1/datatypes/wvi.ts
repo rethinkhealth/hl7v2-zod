@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 WVI Composite Data Type
@@ -46,8 +45,8 @@ export const WVI_2 = SimpleTypes.ST.max(17).optional().register(hl7v2Metadata, {
  * - WVI.2: Channel Name (ST)
  */
 export const WVI = z.object({
-  [`1`]: WVI_1,
-  [`2`]: WVI_2
+  "1": WVI_1,
+  "2": WVI_2
 }).register(hl7v2Metadata, {
   title: 'WVI',
   version: '2.5',

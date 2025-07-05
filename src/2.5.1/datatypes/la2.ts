@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 LA2 Composite Data Type
@@ -228,22 +227,22 @@ export const LA2_16 = SimpleTypes.ST.max(50).optional().register(hl7v2Metadata, 
  * - LA2.16: Other Geographic Designation (ST)
  */
 export const LA2 = z.object({
-  [`1`]: LA2_1,
-  [`2`]: LA2_2,
-  [`3`]: LA2_3,
-  [`4`]: LA2_4,
-  [`5`]: LA2_5,
-  [`6`]: LA2_6,
-  [`7`]: LA2_7,
-  [`8`]: LA2_8,
-  [`9`]: LA2_9,
-  [`10`]: LA2_10,
-  [`11`]: LA2_11,
-  [`12`]: LA2_12,
-  [`13`]: LA2_13,
-  [`14`]: LA2_14,
-  [`15`]: LA2_15,
-  [`16`]: LA2_16
+  "1": LA2_1,
+  "2": LA2_2,
+  "3": LA2_3,
+  "4": LA2_4,
+  "5": LA2_5,
+  "6": LA2_6,
+  "7": LA2_7,
+  "8": LA2_8,
+  "9": LA2_9,
+  "10": LA2_10,
+  "11": LA2_11,
+  "12": LA2_12,
+  "13": LA2_13,
+  "14": LA2_14,
+  "15": LA2_15,
+  "16": LA2_16
 }).register(hl7v2Metadata, {
   title: 'LA2',
   version: '2.5',

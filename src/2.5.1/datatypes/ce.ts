@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 CE Composite Data Type
@@ -98,12 +97,12 @@ export const CE_6 = SimpleTypes.ID.max(20).optional().register(hl7v2Metadata, {
  * - CE.6: Name of Alternate Coding System (ID)
  */
 export const CE = z.object({
-  [`1`]: CE_1,
-  [`2`]: CE_2,
-  [`3`]: CE_3,
-  [`4`]: CE_4,
-  [`5`]: CE_5,
-  [`6`]: CE_6
+  "1": CE_1,
+  "2": CE_2,
+  "3": CE_3,
+  "4": CE_4,
+  "5": CE_5,
+  "6": CE_6
 }).register(hl7v2Metadata, {
   title: 'CE',
   version: '2.5',

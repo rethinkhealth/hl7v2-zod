@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CNE } from './cne';
 
 /**
@@ -47,8 +46,8 @@ export const UVC_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - UVC.2: Value Amount (MO)
  */
 export const UVC = z.object({
-  [`1`]: UVC_1,
-  [`2`]: UVC_2
+  "1": UVC_1,
+  "2": UVC_2
 }).register(hl7v2Metadata, {
   title: 'UVC',
   version: '2.5',

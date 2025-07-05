@@ -98,12 +98,12 @@ export const CF_6 = SimpleTypes.ID.max(20).optional().register(hl7v2Metadata, {
  * - CF.6: Name of Alternate Coding System (ID)
  */
 export const CF = z.object({
-  [`1`]: CF_1,
-  [`2`]: CF_2,
-  [`3`]: CF_3,
-  [`4`]: CF_4,
-  [`5`]: CF_5,
-  [`6`]: CF_6
+  "1": CF_1,
+  "2": CF_2,
+  "3": CF_3,
+  "4": CF_4,
+  "5": CF_5,
+  "6": CF_6
 }).register(hl7v2Metadata, {
   title: 'CF',
   version: '2.5',

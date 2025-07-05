@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 EIP Composite Data Type
@@ -46,8 +45,8 @@ export const EIP_2 = SimpleTypes.ST.optional().register(hl7v2Metadata, {
  * - EIP.2: Filler Assigned Identifier (EI)
  */
 export const EIP = z.object({
-  [`1`]: EIP_1,
-  [`2`]: EIP_2
+  "1": EIP_1,
+  "2": EIP_2
 }).register(hl7v2Metadata, {
   title: 'EIP',
   version: '2.5',

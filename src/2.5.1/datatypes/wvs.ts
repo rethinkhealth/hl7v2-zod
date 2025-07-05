@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 WVS Composite Data Type
@@ -46,8 +45,8 @@ export const WVS_2 = SimpleTypes.ST.max(8).optional().register(hl7v2Metadata, {
  * - WVS.2: Source Two Name (ST)
  */
 export const WVS = z.object({
-  [`1`]: WVS_1,
-  [`2`]: WVS_2
+  "1": WVS_1,
+  "2": WVS_2
 }).register(hl7v2Metadata, {
   title: 'WVS',
   version: '2.5',

@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 SRT Composite Data Type
@@ -46,8 +45,8 @@ export const SRT_2 = SimpleTypes.ID.max(2).optional().register(hl7v2Metadata, {
  * - SRT.2: Sequencing (ID)
  */
 export const SRT = z.object({
-  [`1`]: SRT_1,
-  [`2`]: SRT_2
+  "1": SRT_1,
+  "2": SRT_2
 }).register(hl7v2Metadata, {
   title: 'SRT',
   version: '2.5',

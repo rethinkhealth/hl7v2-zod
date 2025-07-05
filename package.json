@@ -2,7 +2,15 @@
   "name": "@rethinkhealth/hl7v2-zod",
   "version": "1.0.0",
   "description": "HL7v2 Zod schemas for type-safe HL7v2 message parsing and validation",
-  "keywords": ["hl7", "hl7v2", "zod", "schemas", "healthcare", "medical", "validation"],
+  "keywords": [
+    "hl7",
+    "hl7v2",
+    "zod",
+    "schemas",
+    "healthcare",
+    "medical",
+    "validation"
+  ],
   "author": "Rethink Health",
   "license": "MIT",
   "packageManager": "pnpm@10.12.1",
@@ -26,7 +34,11 @@
       "require": "./dist/2.8/index.js"
     }
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -42,7 +54,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.5.0",
+    "@biomejs/biome": "^2.0.0",
     "@types/node": "^20.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0",

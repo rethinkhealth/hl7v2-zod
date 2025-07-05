@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 import { CWE } from './cwe';
 
 /**
@@ -320,29 +319,29 @@ export const XCN_23 = CWE.optional().register(hl7v2Metadata, {
  * - XCN.23: Assigning Agency or Department (CWE)
  */
 export const XCN = z.object({
-  [`1`]: XCN_1,
-  [`2`]: XCN_2,
-  [`3`]: XCN_3,
-  [`4`]: XCN_4,
-  [`5`]: XCN_5,
-  [`6`]: XCN_6,
-  [`7`]: XCN_7,
-  [`8`]: XCN_8,
-  [`9`]: XCN_9,
-  [`10`]: XCN_10,
-  [`11`]: XCN_11,
-  [`12`]: XCN_12,
-  [`13`]: XCN_13,
-  [`14`]: XCN_14,
-  [`15`]: XCN_15,
-  [`16`]: XCN_16,
-  [`17`]: XCN_17,
-  [`18`]: XCN_18,
-  [`19`]: XCN_19,
-  [`20`]: XCN_20,
-  [`21`]: XCN_21,
-  [`22`]: XCN_22,
-  [`23`]: XCN_23
+  "1": XCN_1,
+  "2": XCN_2,
+  "3": XCN_3,
+  "4": XCN_4,
+  "5": XCN_5,
+  "6": XCN_6,
+  "7": XCN_7,
+  "8": XCN_8,
+  "9": XCN_9,
+  "10": XCN_10,
+  "11": XCN_11,
+  "12": XCN_12,
+  "13": XCN_13,
+  "14": XCN_14,
+  "15": XCN_15,
+  "16": XCN_16,
+  "17": XCN_17,
+  "18": XCN_18,
+  "19": XCN_19,
+  "20": XCN_20,
+  "21": XCN_21,
+  "22": XCN_22,
+  "23": XCN_23
 }).register(hl7v2Metadata, {
   title: 'XCN',
   version: '2.5',

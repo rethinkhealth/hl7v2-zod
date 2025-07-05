@@ -1,7 +1,6 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
 import { SimpleTypes } from './simpletypes';
-import { MixedTypes } from './mixedtypes';
 
 /**
  * HL7 v2.5 SPD Composite Data Type
@@ -72,10 +71,10 @@ export const SPD_4 = SimpleTypes.DT.max(8).optional().register(hl7v2Metadata, {
  * - SPD.4: Date of Certification (DT)
  */
 export const SPD = z.object({
-  [`1`]: SPD_1,
-  [`2`]: SPD_2,
-  [`3`]: SPD_3,
-  [`4`]: SPD_4
+  "1": SPD_1,
+  "2": SPD_2,
+  "3": SPD_3,
+  "4": SPD_4
 }).register(hl7v2Metadata, {
   title: 'SPD',
   version: '2.5',

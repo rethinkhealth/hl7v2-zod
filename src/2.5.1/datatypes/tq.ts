@@ -177,18 +177,18 @@ export const TQ_12 = SimpleTypes.NM.max(4).optional().register(hl7v2Metadata, {
  * - TQ.12: Total Occurrences (NM)
  */
 export const TQ = z.object({
-  [`1`]: TQ_1,
-  [`2`]: TQ_2,
-  [`3`]: TQ_3,
-  [`4`]: TQ_4,
-  [`5`]: TQ_5,
-  [`6`]: TQ_6,
-  [`7`]: TQ_7,
-  [`8`]: TQ_8,
-  [`9`]: TQ_9,
-  [`10`]: TQ_10,
-  [`11`]: TQ_11,
-  [`12`]: TQ_12
+  "1": TQ_1,
+  "2": TQ_2,
+  "3": TQ_3,
+  "4": TQ_4,
+  "5": TQ_5,
+  "6": TQ_6,
+  "7": TQ_7,
+  "8": TQ_8,
+  "9": TQ_9,
+  "10": TQ_10,
+  "11": TQ_11,
+  "12": TQ_12
 }).register(hl7v2Metadata, {
   title: 'TQ',
   version: '2.5',

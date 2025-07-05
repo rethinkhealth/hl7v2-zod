@@ -1,6 +1,5 @@
 import { z } from 'zod/v4';
 import hl7v2Metadata from '../registry';
-import { SimpleTypes } from './simpletypes';
 import { MixedTypes } from './mixedtypes';
 import { CWE } from './cwe';
 
@@ -112,13 +111,13 @@ export const SPS_7 = CWE.optional().register(hl7v2Metadata, {
  * - SPS.7: Specimen Role (CWE)
  */
 export const SPS = z.object({
-  [`1`]: SPS_1,
-  [`2`]: SPS_2,
-  [`3`]: SPS_3,
-  [`4`]: SPS_4,
-  [`5`]: SPS_5,
-  [`6`]: SPS_6,
-  [`7`]: SPS_7
+  "1": SPS_1,
+  "2": SPS_2,
+  "3": SPS_3,
+  "4": SPS_4,
+  "5": SPS_5,
+  "6": SPS_6,
+  "7": SPS_7
 }).register(hl7v2Metadata, {
   title: 'SPS',
   version: '2.5',

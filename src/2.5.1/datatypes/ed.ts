@@ -85,11 +85,11 @@ export const ED_5 = MixedTypes.TX.register(hl7v2Metadata, {
  * - ED.5: Data (TX)
  */
 export const ED = z.object({
-  [`1`]: ED_1,
-  [`2`]: ED_2,
-  [`3`]: ED_3,
-  [`4`]: ED_4,
-  [`5`]: ED_5
+  "1": ED_1,
+  "2": ED_2,
+  "3": ED_3,
+  "4": ED_4,
+  "5": ED_5
 }).register(hl7v2Metadata, {
   title: 'ED',
   version: '2.5',

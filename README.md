@@ -5,9 +5,9 @@ Type-safe HL7v2 message parsing and validation using Zod v4 schemas.
 ## Features
 
 - **Type-safe validation**: Full TypeScript support with Zod v4 schemas for all HL7v2 message types
-- **Multiple HL7 versions**: Support for HL7v2 versions 2.6 and 2.8
+- **Multiple HL7 versions**: Support for HL7v2 versions, e.g. 2.6 and 2.8
 - **Comprehensive coverage**: Includes all message types, segments, fields, and data types for each version
-- **Zero dependencies**: Only requires Zod v4 as a peer dependency
+- **Minimum dependencies**: Only requires Zod v4 as a peer dependency
 - **Tree-shakable**: Import only the schemas you need with subpath imports
 - **Zod v4 optimized**: Built with the latest Zod v4 features for better performance and TypeScript efficiency
 - **Optimal performance**: Use subpath imports to include only the HL7 version you need

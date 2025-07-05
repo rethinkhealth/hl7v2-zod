@@ -96,5 +96,8 @@
   "bugs": {
     "url": "https://github.com/rethinkhealth/hl7v2-zod/issues"
   },
-  "homepage": "https://github.com/rethinkhealth/hl7v2-zod#readme"
+  "homepage": "https://github.com/rethinkhealth/hl7v2-zod#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
